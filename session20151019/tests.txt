@@ -1,0 +1,7 @@
+-1 -> error
+0 -> zero euros
+1 -> one cent
+2 -> zwo cents
+21 -> twenty-one
+10000 -> one hundred
+110000 -> one thousand, one hundred
