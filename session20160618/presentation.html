@@ -6,8 +6,25 @@
 
     <title>#crvie16</title>
 
-    <link rel="stylesheet" href="reveal.js/css/reveal.css">
-    <link rel="stylesheet" href="reveal.js/css/theme/sky.css" id="theme">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="../reveal.js/css/reveal.min.css">
+    <link rel="stylesheet" href="../reveal.js/css/theme/sky.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="../reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
   </head>
 
   <body>
@@ -71,7 +88,7 @@
             <h2>No constraint</h2>
             Get used to the task.
           </section>
-          
+
           <section>
             <h2>Break 10'</h2>
             eat, drink and talk<br/>
@@ -92,7 +109,7 @@
           <section>
             <h2>Fixed roles</h2>
             Role: Tester<br/>
-            Role: Developer 
+            Role: Developer
           </section>
 
           <section>
@@ -141,7 +158,7 @@
            	Each team has its timer (between 2 - 4min) <br/><br/>
            	<b>On-Timeout: </b><br/>
            	Reset your code<br/><br/>
-           	
+
            	<b>On-Check In</b><br/>
            	Team stands up<br/>
            	Call out &quot;Check it&quot; and High five<br/>
@@ -206,7 +223,7 @@
             	Lunch<br/>
 				Timed Baby steps<br/>
 				No naked primitives<br/>
-				Mouse to Navigator / Keyboard to Driver<br/>            	
+				Mouse to Navigator / Keyboard to Driver<br/>
         	</section>
         	<section>
         		What if anything, <b>surprised</b> you today?<br/>
@@ -223,15 +240,35 @@
       </div>
     </div>
 
-    <script src="reveal.js/js/reveal.js"></script>
+    <script src="../reveal.js/lib/js/head.min.js"></script>
+    <script src="../reveal.js/js/reveal.min.js"></script>
 
     <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
-        controls: false,
-        progress: false,
+        controls: true,
+        progress: true,
         history: true,
-        overview: false
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: '../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '../reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '../reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: '../reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
       });
+
+      // setInterval(function() { Reveal.next(); }, 15000);
+
     </script>
 
   </body>
