@@ -1,4 +1,4 @@
-# Coding Dojo Vienna - #GDCR15 Media
+# Coding Dojo Vienna - #CRVIE16 Media
 
 This repository contains the presentation and media files used for the Coderetreat June 2016 in Vienna, Austria.
 
