@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Session 20161116</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="../reveal.js/css/reveal.min.css">
+    <link rel="stylesheet" href="../reveal.js/css/theme/sky.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="../reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+                              <section>
+                                 <p>
+                                    <a href="https://twitter.com/#CodingDojoVie">#CodingDojoVie</a>
+                                 </p>
+                                 <h1>Coding Dojo Vienna</h1>
+                                 <br/>
+                                 <h3>Session 20161116</h3>
+                                 <p>
+                                    <small>Sponsor and venue: <a href="https://twitter.com/techtalks">@techtalks</a>
+                                       <br/>Host: <a href="https://twitter.com/paulroho">@paulroho</a></small>
+                                 </p>
+                                 <br/>
+                                 <p>
+                                    <small>Next Session: @willhaben</small>
+                                 </p>
+                                 <br />
+                              </section>
+ 		<section>
+            <h2>What is a Coding Dojo?</h2>
+            <br />
+            <ul>
+            	<li>Safe place outside of work and away from production code</li>
+            	<li>Deliberate Practice => Learning</li>
+            	<li>Relax and Slow down</li>
+            	<li>You don't have to finish</li>
+            	<li>Focus on doing it right</li>
+            </ul>
+      </section>
+
+ 		<section>
+          <section>
+            <h2>The Rules</h2>
+            <br />
+            <center>
+            <ul>
+            	<li>Test Driven Development</li>
+            	<li>Pair Programming</li>
+            </ul>
+            </table>
+            </center>
+          </section>
+      </section>
+ 
+        <section>
+          <section>
+            <p>The Exercise</p>
+            <h2>Supermarket Kata</h2>
+            <p><small><a href="https://github.com/paulroho/SupermarketKata">https://github.com/paulroho/SupermarketKata</a></small></p>
+            <br />
+            <ul>
+            	<li>Domain: Supermarket</li>
+            	<li>There is existing code (C# and Java):</li>
+               <ul>
+                  <li>Core: <code>Product</code>, <code>EAN</code></li>
+                  <li>Checkout: <code>Receipt</code>, <code>BookingLine</code>, ...</li>
+                  <li>Additional: <code>ProductRepository</code></li>
+               </ul>
+            </ul>
+          </section>
+          <section>
+          	<p>The Missing Feature</p>
+            <h3>Checkout at the Cash Register</h3>
+            <br />
+            <h4>What it is about</h4>
+            <ul>
+               <li>Scanning of products</li>
+               <li>Collecting and calculating information on receipt</li>
+            </ul>
+
+          </section>
+          <section>
+          	<p>The Missing Feature</p>
+            <h3>Checkout at the Cash Register</h3>
+            <br />
+            <h4>What we have</h4>
+            <ul>
+               <li>There are acceptance tests in Gherkin</li>
+               <li><em>Pseudo</em> receipt for acceptance:<br/>
+                  <pre>
+		Milk 1l         1.20€
+		Gherkins 350g   3.60€
+		---------------------
+		Total           4.80€
+		Incl. 20% VAT   0.80€                 
+                  </pre>
+                  </li>
+            </ul>
+
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>Session 1</h1>
+            <p>15'</p>
+          </section>
+          
+          <section>
+            <p>Session 1</p>
+            <h2>Download and Inspect</h2>
+            <br/>
+            <ol>
+               <li>Find a partner &amp; agree on language</li>
+               <li>Download code: <a href="https://github.com/paulroho/SupermarketKata">https://github.com/paulroho/SupermarketKata</a></li>
+               <li>Make yourself familiar with existing code:</li>
+               <ul>
+                  <li>Domain model</li>
+                  <li>Glueing for specs (<code>CashDeskSpecsDriver</code>)</li>
+               </ul>
+            </ol>
+          </section>
+          
+          <section>
+            <p>Session 1</p>
+            <h2>Discussion</h2>
+          </section>
+        </section>
+        
+        <section>
+          <section>
+            <h1>Session 2</h1>
+            <p>15'</p>
+          </section>
+
+          <section>
+            <p>Session 2</p>
+            <h2>Define API</h2>
+            <br/>
+            <ul>
+               <li>Define the API for the <code>ICashRegister</code> interface</li>
+               <li>Lookout for the <code>TODOs</code> in the <code>CashDeskSpecsDriver</code><br/>
+                  =&gt; replace them with calls to your API</li>
+               <li>Provide dummy implementation for <code>CashRegister</code> (throw <code>NotImplementedException</code>/<code>RuntimeException</code>)</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Session 2</h2>
+            <h3>Retrospective</h3>
+          </section>
+        </section>
+        
+        <section>
+            <section>
+               <h1>Session 3</h1>
+               <p>40'</p>
+            </section>
+            
+            <section>
+               <p>Session 3</p>
+               <h2>Simple Checkout</h2>
+               <br/>
+               <ul>
+                  <li>Goal: Pass the acceptance tests in SimpleCheckout.feature</li>
+                  <li>Constraint: Fail in Beauty</li>
+               </ul>
+            </section>
+             
+            <section>
+               <h2>The TDD Cycle Revisited:<br>Fail fast and in Beauty</h2>
+               <br/>
+               <ol>
+                  <li>Start with a <b>unit test</b> and make it <b>fail great</b>:</li>
+                     <ul>
+                        <li><b>Name</b> of the test</li>
+                        <li>Assertion <b>message</b></li>
+                     </ul>
+                  <li>Make the test <b>pass</b> by writing production code<br>
+                      =&gt; <em>"Do the simplest thing that could possibly work."</em></li>
+                  <li><b>Refactor</b> both the <b>test</b> and the <b>production</b> code.</li>
+               </ol>
+            </section>
+
+          <section>
+            <h2>Session 3</h2>
+            <h3>Retrospective</h3>
+          </section>
+        </section>
+        
+        <section>
+            <section>
+               <h1>Session 4</h1>
+               <p>40'</p>
+            </section>
+            
+            <section>
+               <p>Session 4</p>
+               <h2>Simple Checkout - cont'd</h2>
+               <br/>
+               <ul>
+                  <li>Goal: Really pass the acceptance tests in SimpleCheckout.feature</li>
+                  <li>Constraint: Micro Pairing<br/>
+                      (Additionally to &quot;Fail in Beauty&quot;)</li>
+               </ul>
+            </section>
+            
+            <section>
+               <p>Session 4</p>
+               <h2>Micro Pairing</h2>
+               <p><small><a href="http://codingdojo.org/cgi-bin/index.pl?MicroPairing">http://codingdojo.org/cgi-bin/index.pl?MicroPairing</a></small></p>
+               <br/>
+               <ul>
+                  <li>A writes failing test (compiles but red)</li>
+                  <li>B writes production code to make the test pass</li>
+                  <li>A refactors</li>
+                  <li>B writes failing test</li>
+                  <li>...</li>
+               </ul>
+            </section>
+
+          <section>
+            <h2>Session 4</h2>
+            <h3>Retrospective</h3>
+          </section>        </section>
+
+      </div>
+
+    </div>
+
+    <script src="../reveal.js/lib/js/head.min.js"></script>
+    <script src="../reveal.js/js/reveal.min.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: '../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '../reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '../reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: '../reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+
+      // setInterval(function() { Reveal.next(); }, 15000);
+
+    </script>
+
+  </body>
+</html>
