@@ -16,7 +16,7 @@ Try to follow the existing structure of the presentations, at least the introduc
 
 **The introduction should contain:**
 * Reference to "Coding Dojo Vienna"
-* Twitter hash tag #CodingDojoVie
+* Twitter hash tag ```#CodingDojoVie```
 * Hint about next session (if available)
 
 **Also consider mentioning:**
@@ -43,18 +43,18 @@ Simply add a new folder ```sessionYYYYMMDD``` with the date properly filled in.
 
 ** example description on doodle: **
 
-The next meeting of the Coding Dojo Vienna. Sign Up with your full name and bring a photo ID. This is required as the participants have to be registered at the location.
-
-The Focus/Topic of this session is going to be XYZ
-
-To prepare:
-A laptop with a development environment, including a test-framework, in the programming language of your preference. A version control system, ideally Git, is also recommended. Prepared means: A few mouse clicks or key-shortcuts, and a dummy-unit test is green.
-
-17:45-18:00 is time for arrival, 18:00 is start.
-
-Twitter: #CodingDojoVie
-Moderator: Ernst Fastl
-Meta: https://codingdojovie.github.io/
+>The next meeting of the Coding Dojo Vienna. Sign Up with your full name and bring a photo ID. This is required as the participants have to be registered at the location.
+>
+>The Focus/Topic of this session is going to be XYZ
+>
+>To prepare:
+>A laptop with a development environment, including a test-framework, in the programming language of your preference. A version control system, ideally Git, is also recommended. Prepared means: A few mouse clicks or key-shortcuts, and a dummy-unit test is green.
+>
+>17:45-18:00 is time for arrival, 18:00 is start.
+>
+>Twitter: #CodingDojoVie
+>Moderator: ABC
+>Meta: https://codingdojovie.github.io/
 
 ### Create an appointment at www.softwerkskammer.org
 
@@ -76,7 +76,7 @@ Meta: https://codingdojovie.github.io/
 * topic
 
 **example:**
-The next #CodingDojoVie will be on Wed Jun, 28th: http://doodle.com/poll/ne4gtuyvegd7su73 at s IT Solutions focusing on be the D in SOLID: DIP
+>The next #CodingDojoVie will be on Wed Jun, 28th: http://doodle.com/poll/ne4gtuyvegd7su73 at s IT Solutions focusing on be the D in SOLID: DIP
 
 ### Announce the event to developers within your organization
 
