@@ -37,24 +37,25 @@ Simply add a new folder ```sessionYYYYMMDD``` with the date properly filled in.
 * Think about how they can access the location (security etc.)
 * default time is 17:45-20:00
 
-### Create a doodle appointment
+### Create a www.doodle.com appointment
 * Only 1 date and time
 * Limit to 20 people or less
 
-** example description on www.doodle.com: **
+**example description:**
+<pre>
+The next meeting of the Coding Dojo Vienna. Sign Up with your full name and bring a photo ID. This is required as the participants have to be registered at the location.
 
->The next meeting of the Coding Dojo Vienna. Sign Up with your full name and bring a photo ID. This is required as the participants have to be registered at the location.
->
->The Focus/Topic of this session is going to be XYZ
->
->To prepare:
->A laptop with a development environment, including a test-framework, in the programming language of your preference. A version control system, ideally Git, is also recommended. Prepared means: A few mouse clicks or key-shortcuts, and a dummy-unit test is green.
->
->17:45-18:00 is time for arrival, 18:00 is start.
->
->Twitter: #CodingDojoVie
->Moderator: ABC
->Meta: https://codingdojovie.github.io/
+The Focus/Topic of this session is going to be XYZ
+
+To prepare:
+A laptop with a development environment, including a test-framework, in the programming language of your preference. A version control system, ideally Git, is also recommended. Prepared means: A few mouse clicks or key-shortcuts, and a dummy-unit test is green.
+
+17:45-18:00 is time for arrival, 18:00 is start.
+
+Twitter: #CodingDojoVie
+Moderator: ABC
+Meta: https://codingdojovie.github.io/
+</pre>
 
 ### Create an appointment at www.softwerkskammer.org
 
@@ -76,7 +77,9 @@ Simply add a new folder ```sessionYYYYMMDD``` with the date properly filled in.
 * topic
 
 **example:**
->The next #CodingDojoVie will be on Wed Jun, 28th: http://doodle.com/poll/ne4gtuyvegd7su73 at s IT Solutions focusing on be the D in SOLID: DIP
+<pre>
+The next #CodingDojoVie will be on Wed Jun, 28th: http://doodle.com/poll/ne4gtuyvegd7su73 at s IT Solutions focusing on be the D in SOLID: DIP
+</pre>
 
 ### Announce the event to developers within your organization
 
