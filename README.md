@@ -41,7 +41,7 @@ Simply add a new folder ```sessionYYYYMMDD``` with the date properly filled in.
 * Only 1 date and time
 * Limit to 20 people or less
 
-** example description on doodle: **
+** example description on www.doodle.com: **
 
 >The next meeting of the Coding Dojo Vienna. Sign Up with your full name and bring a photo ID. This is required as the participants have to be registered at the location.
 >
