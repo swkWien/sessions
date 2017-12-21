@@ -1,0 +1,17 @@
+.session__requirements {
+    float: left;
+    display: block;
+    width: 50%;
+}
+
+.session__constraints {
+    float: right;
+    display: block;
+    width: 50%;
+}
+
+.session__requirements ul,
+.session__constraints ol {
+    font-size: 0.7em;
+}
+
