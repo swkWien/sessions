@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Session 20150114</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="reveal.js/css/reveal.min.css">
+    <link rel="stylesheet" href="reveal.js/css/theme/sky.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+        document.write('<link rel="stylesheet" href="reveal.js/css/print/' + ( window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">');
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+        <section>
+            <h1>Coding Dojo Vienna</h1>
+
+            <h3>Session 20150729</h3>
+
+            <p>
+                <small>Next Session: August, 2015 @Frequentis (?)</small>
+            </p>
+            <br/>
+
+            <p>
+                Twitter: #CodingDojoVie
+            </p>
+        </section>
+
+
+        <section>
+            <section>
+                <h2>Timeline</h2>
+                <br/>
+                <center>
+                    <table>
+                        <tr>
+                            <td>18:00</td>
+                            <td>-</td>
+                            <td>Intro</td>
+                        </tr>
+                        <tr>
+                            <td>18:30</td>
+                            <td>-</td>
+                            <td>Have Fun</td>
+                        </tr>
+                        <tr>
+                            <td>19:30</td>
+                            <td>-</td>
+                            <td>Integration</td>
+                        </tr>
+                        <tr>
+                            <td>19:45</td>
+                            <td>-</td>
+                            <td>Retro</td>
+                        </tr>
+                        <tr>
+                            <td>20:00</td>
+                            <td>-</td>
+                            <td>End</td>
+                        </tr>
+                    </table>
+                </center>
+
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h1>Intro</h1>
+            </section>
+            <section>
+                <h2>Intro</h2>
+
+                <h3>Who am I?</h3>
+                <br>
+                <h4>Martin Lemanski</h4>
+                <center>
+                    <table>
+                        <tr>
+                            <td>Developer @ willhaben.at</td>
+                        </tr>
+                        <tr>
+                            <td>Father of two kids</td>
+                        </tr>
+                        <tr>
+                            <td>Quality lover</td>
+                        </tr>
+                    </table>
+                </center>
+
+            </section>
+            <section>
+                <h2>Intro</h2>
+
+                <h3>The Exercise</h3>
+                <br/>
+                <h4>github.com/mlem/csv-displayer</h4>
+                <br/>
+                <center>
+                    <li>You are a Scrum-Team</li>
+                    <li>Programming in Pairs</li>
+                    <li>Any available language</li>
+                    <li>CLI-apps</li>
+                </center>
+                <p>
+                </p>
+
+            </section>
+
+
+            <section>
+                <h2>CSV - Displayer</h2>
+
+                <h3>The Plan</h3>
+                <center>
+                    <table>
+                        <tr>
+                            <th>Intro</th>
+                        </tr>
+                        <tr>
+                            <td>Talk with your PO about the requirements (15m)</td>
+                        </tr>
+                        <tr>
+                            <td>Goal / Sprintgoal? (5m)</td>
+                        </tr>
+                    </table>
+                </center>
+
+            </section>
+            <section>
+                <h2>CSV - Displayer</h2>
+
+                <h3>Requirements</h3>
+                <table>
+                    <tr><td>50</td><td>|</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>45</td><td>|</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>40</td><td>|</td><td>*</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>35</td><td>|</td><td></td><td>*</td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>30</td><td>|</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>25</td><td>|</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>20</td><td>|</td><td></td><td></td><td>*</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>15</td><td>|</td><td></td><td></td><td></td><td>*</td><td>*</td><td>*</td><td></td></tr>
+                    <tr><td>10</td><td>|</td><td></td><td></td><td></td><td></td><td></td><td></td><td>*</td></tr>
+                    <tr><td>5</td><td>|</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>0</td><td>+</td><td>----</td><td>----</td><td>----</td><td>----</td><td>----</td><td>----</td><td>----</td></tr>
+                    <tr><td></td><td></td><td>Mon</td><td>Tue</td><td>Wed</td><td>Thu</td><td>Fri</td><td>Sat</td><td>Sun</td></tr>
+                </table>
+            </section>
+            <section>
+                <h2>CSV - Displayer</h2>
+
+                <h3>Requirements</h3>
+                <table>
+                    <tr><td>20</td><td>|</td><td></td><td></td><td>*</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>15</td><td>|</td><td></td><td></td><td></td><td>*</td><td>*</td><td>*</td><td></td></tr>
+                    <tr><td>10</td><td>|</td><td></td><td></td><td></td><td></td><td></td><td></td><td>*</td></tr>
+                    <tr><td>5</td><td>|</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>0</td><td>+</td><td>----</td><td>----</td><td>----</td><td>----</td><td>----</td><td>----</td><td>----</td></tr>
+                    <tr><td>-5</td><td>|</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>-10</td><td>|</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>-15</td><td>|</td><td>*</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>-20</td><td>|</td><td></td><td>*</td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>-25</td><td>|</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>-30</td><td>|</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                </table>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h1>Have Fun</h1>
+
+            </section>
+            <section>
+                <h2>Have Fun</h2>
+
+                <h3>The Plan</h3>
+                <center>
+                    <table>
+                        <tr>
+                            <td>Find a partner & agree on environment (5m)</td>
+                        </tr>
+                        <tr>
+                            <td>Code! (55m)</td>
+                        </tr>
+                    </table>
+                </center>
+            </section>
+            <section>
+                <h2>Have Fun</h2>
+                <center>
+                    <table>
+                        <tr>
+                            <td>Make pause whenever you want</td>
+                        </tr>
+                        <tr>
+                            <td>Ask the PO whenever you want</td>
+                        </tr>
+                    </table>
+                </center>
+                <p>
+                </p>
+
+            </section>
+        </section>
+        <section>
+            <section>
+                <h1>Integration</h1>
+            </section>
+            <section>
+                <h2>Presentation</h2>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h1>Retro</h1>
+            </section>
+            <section>
+                <h2>Retro</h2>
+                <ul>
+                    <li>Tell us what you did like and what you didn't?</li>
+                    <li>What did you expect?</li>
+                    <li>Any learnings?</li>
+                </ul>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h1>End</h1>
+
+                <h2>Thank you for participating</h2>
+                <br>
+
+                <h3>Contact me</h3>
+                <ul>
+                    <li>Email: martin.lemanski@willhaben.at</li>
+                    <li>Twitter: @BeoMartin</li>
+                    <li>Github: github.com/mlem</li>
+                </ul>
+            </section>
+        </section>
+    </div>
+
+</div>
+
+<script src="reveal.js/lib/js/head.min.js"></script>
+<script src="reveal.js/js/reveal.min.js"></script>
+
+<script>
+
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+            {
+                src: 'reveal.js/lib/js/classList.js', condition: function () {
+                return !document.body.classList;
+            }
+            },
+            {
+                src: 'reveal.js/plugin/markdown/marked.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            }
+            },
+            {
+                src: 'reveal.js/plugin/markdown/markdown.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            }
+            },
+            {
+                src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function () {
+                hljs.initHighlightingOnLoad();
+            }
+            },
+            {
+                src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function () {
+                return !!document.body.classList;
+            }
+            },
+            {
+                src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function () {
+                return !!document.body.classList;
+            }
+            }
+        ]
+    });
+
+    // setInterval(function() { Reveal.next(); }, 15000);
+
+</script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,360 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+
+    <title>Session 2017-11-29</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <link rel="stylesheet" href="reveal.js/css/reveal.min.css" />
+    <link rel="stylesheet" href="reveal.js/css/theme/sky.css" id="theme" />
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css" />
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+        //<![CDATA[
+        document.write('<link rel="stylesheet" href="reveal.js/css/print/' + (window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper') + '.css" type="text/css" media="print">');
+	   //]]>
+    </script>
+
+    <style>
+        td.principle-name {
+            font-style: italic;
+        }
+
+        h2,
+        h3 {
+            text-transform: none !important;
+        }
+
+        table.tictactoe {
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid grey;
+            background-color: antiquewhite;
+        }
+
+        table.tictactoe td {
+            border: 1px solid grey;
+            text-align: center;
+            width: 2em;
+        }
+
+        table.tictactoe td span.overlay {
+            position: absolute;
+            padding-top: 0.3em;
+        }
+
+        table.tictactoe td.win {
+            color: darkred;
+            font-weight: bold;
+        }
+    </style>
+
+    <!--[if lt IE 9]>
+	 <script src="lib/js/html5shiv.js"></script>
+	 <![endif]-->
+</head>
+
+<body>
+    <div class="reveal">
+
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section>
+                <p>
+                    <a href="https://twitter.com/#CodingDojoVie">#CodingDojoVie</a>
+                </p>
+                <h1>Coding Dojo Vienna</h1>
+                <br/>
+                <h3>Session 2017-11-29</h3>
+                <p>
+                    <small>Sponsor and venue:
+                        <a href="https://twitter.com/techtalks">@techtalks</a>
+                        <br/>Host:
+                        <a href="https://twitter.com/paulroho">@paulroho</a>
+                    </small>
+                </p>
+                <br/>
+            </section>
+
+
+
+            <section>
+                <h2>What is a Coding Dojo?</h2>
+                <br />
+                <ul>
+                    <li>A safe place</li>
+                    <li>Away from production code</li>
+                    <li>Relax and slow down</li>
+                    <li>Nothing to finish</li>
+                    <li>Focus on doing it right</li>
+                    <br/>
+                    <li>Deliberate Practice =&gt; Learning</li>
+                    <li>Learning =&gt; Sharing =&gt; Learning</li>
+                </ul>
+            </section>
+
+
+
+            <section>
+                <section>
+                    <h2>The Rules</h2>
+                    <br />
+                    <center>
+                        <ul>
+                            <li>Test Driven Development</li>
+                            <li>Pair Programming</li>
+                            <li>Outside-In</li>
+                        </ul>
+                    </center>
+                </section>
+            </section>
+
+
+            <section>
+                <section>
+                    <p>Topic for today:
+                        <br/>
+                        <br/>Designing (Extending) a</p>
+                    <h1>Mistake-Proof API</h1>
+                </section>
+                <section>
+                    <p>The Challenge</p>
+                    <h2>How to write an API
+                        <br>so that
+                        <br>it cannot be misused?</h2>
+                    <p>
+                        <small>Inspired by
+                            <a href="http://blog.tmorris.net/posts/understanding-practical-api-design-static-typing-and-functional-programming/">http://blog.tmorris.net/posts/understanding-practical-api-design-static-typing-and-functional-programming/</a>
+                            by Tony Morris</small>
+                    </p>
+                </section>
+                <section>
+                    <h3>As a user of the API
+                        <br>we do not want to</h3>
+                    <ul>
+                        <li>pass references</li>
+                        <li>check for
+                            <code>null</code>
+                        </li>
+                        <li>see
+                            <code>NullReferenceException</code> (or any other)
+                        </li>
+                        <li>inspect types</li>
+                        <li>cast references</li>
+                        <li>make decisions</li>
+                    </ul>
+                    <p>&nbsp;</p>
+                    <p>
+                        <small>Motto</small>
+                    </p>
+                    <blockquote>If the compiler does not complain,
+                        <br>it should be fine.</blockquote>
+                </section>
+            </section>
+
+
+
+            <section>
+                <p>Before we start</p>
+                <h2>Form pairs</h2>
+                <p>&nbsp;</p>
+                <ul>
+                    <li>Agree on language</li>
+                    <ul>
+                        <li>C#</li>
+                        <li>Java</li>
+                    </ul>
+                    <li>Have a computer ready</li>
+                </ul>
+            </section>
+
+
+
+            <section>
+                <section>
+                    <p>Part 1</p>
+                    <h2>Diving Into</h2>
+                </section>
+
+                <section>
+                    <p>The Domain</p>
+                    <h3>Tic Tac Toe</h3>
+                    <table class="tictactoe">
+                        <tr>
+                            <td>X</td>
+                            <td>O</td>
+                            <td class="win">X</td>
+                        </tr>
+                        <tr>
+                            <td>O</td>
+                            <td class="win">X</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="win">X</td>
+                            <td>&nbsp;</td>
+                            <td>O</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <section>
+                    <h3>See what is there</h3>
+                    <p>C#:
+                        <br>
+                        <a href="https://github.com/paulroho/TicTacToe-MistakeProof">https://github.com/paulroho/TicTacToe-MistakeProof</a>
+                    </p>
+                    <p>Java:
+                        <br>
+                        <a href="https://bitbucket.org/pkofler/tictactoe-mistakeproof-java">https://bitbucket.org/pkofler/tictactoe-mistakeproof-java</a>
+                    </p>
+                    <hr>
+                    <p>Start with</p>
+                    <ul>
+                        <li>the console client (+test - run it!)</li>
+                        <li>the tests for the &quot;game engine&quot;</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Let's Discuss What We Saw</h3>
+                </section>
+            </section>
+
+
+            <section>
+                <section>
+                    <p>Part 2</p>
+                    <h2>Extending the API</h2>
+                </section>
+
+                <section>
+                    <p>Issue:</p>
+                    <h3>No check for occupied positions</h3>
+                    <table class="tictactoe">
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>
+                                <span class="overlay">X</span>
+                                <span class="overlay">O</span>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </table>
+                    <p>&nbsp;</p>
+                    <p>The Assignment</p>
+                    <h3>Extend/Change the API</h3>>
+                    <ul>
+                        <li>
+                            <em>Prevent</em> setting on occupied fields</li>
+                        <li>Adhere to the rules</li>
+                        <li>Work outside-in</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Ad Outside-In</h3>
+
+                    <ul>
+                        <li>Start with the usage of the new API</li>
+                        <li>Write some client-code (a test?)</li>
+                        <li>Think: Does it enforce correct usage?</li>
+                        <li>Think: How could it be misused?
+                            <br>
+                            <small>And how to fix it?</small>
+                        </li>
+                        <li>Don't think about the implementation (by now)</li>
+                    </ul>
+
+                    <p>&nbsp;</p>
+                    <p>Goal:</p>
+                    <blockquote>Have a sample of a call
+                        <br>to the (not yet existing) API</blockquote>
+
+                </section>
+
+                <section>
+                    <h3>Discuss</h3>
+                </section>
+            </section>
+
+
+
+            <section>
+                <section>
+                    <p>Part 3</p>
+                    <h2>Implement it</h2>
+                    <ul>
+                        <li>Test drive your implementation</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Retrospective</h3>
+                </section>
+            </section>
+
+
+            <section>
+                <section>
+                    <h2>Thank you!</h2>
+
+                    <p>
+                        Next Session: @LinkResearchTools in December
+                    </p>
+                </section>
+            </section>
+        </div>
+    </div>
+
+    <script src="reveal.js/lib/js/head.min.js">/**/</script>
+    <script src="reveal.js/js/reveal.min.js">/**/</script>
+
+    <script>
+        //<![CDATA[
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+            transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+            // Optional libraries used to extend on reveal.js
+            dependencies: [
+                { src: 'reveal.js/lib/js/classList.js', condition: function () { return !document.body.classList; } },
+                { src: 'reveal.js/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: 'reveal.js/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+                { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function () { return !!document.body.classList; } },
+                { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function () { return !!document.body.classList; } }
+            ]
+        });
+
+	// setInterval(function() { Reveal.next(); }, 15000);
+	  // ]]>
+    </script>
+</body>
+
+</html>
