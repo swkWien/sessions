@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <link rel="stylesheet" href="reveal.js/css/reveal.min.css" />
-    <link rel="stylesheet" href="reveal.js/css/theme/beige.css" id="theme" />
+    <link rel="stylesheet" href="reveal.js/css/theme/sky.css" id="theme" />
 
     <!-- For syntax highlighting -->
     <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css" />
@@ -39,37 +39,59 @@
         <!-- Any section element inside of this container is displayed as a slide -->
         <div class="slides">
             <section>
-                <p>
-                    <a href="https://twitter.com/#CodingDojoVie">#CodingDojoVie</a>
-                </p>
                 <h1>Coding Dojo Vienna</h1>
-                <br/>
-                <h3>Session 2018-03-27</h3>
+                <br />
+                <img style="border:0;width:20%;" src="images/swkLogo.png" />
+                <h5>Softwerkskammer Wien</h5>
+                <br />
+
                 <p>
-                    <small>Sponsor and venue: LinkResearchTools
-                        <br/>Facilitation: Bojan Bedrac
+                    Twitter: @swkWien &nbsp;&nbsp;/&nbsp;&nbsp; #CodingDojoVie
+                </p>
+                <p>
+                    <small>Sponsor and venue: LinkResearchTools @lnkresearchtool
+                        <br/>Facilitation: Bojan Bedrac @xbojch
+                        <br />Session 2018-03-27
                     </small>
                 </p>
-                <br />
             </section>
 
-            <section>
-                <h2>What is a Coding Dojo?</h2>
+            <section data-background="images/dojo-turmoil.png">
+                <h2>Coding Dojo?</h2>
+
+                <aside class="notes">
+                    No fighting; Place for learning and practice
+                    <ul>
+                        <li>Safe place outside of work and away from production code</li>
+                        <li>Deliberate Practice => Learning</li>
+                        <li>Relax and Slow down</li>
+                        <li>You don't have to finish</li>
+                        <li>Focus on doing it right</li>
+                    </ul>
+                </aside>
+            </section>
+
+            <section data-background="images/matrix-dojo.png">
+                <h2>Coding Dojo!</h2>
                 <br />
-                <div style="display: flex;">
-                    <div>
-                        <ul>
-                            <li>Safe place outside of work and away from production code</li>
-                            <li>Deliberate Practice => Learning</li>
-                            <li>Relax and Slow down</li>
-                            <li>You don't have to finish</li>
-                            <li>Focus on doing it right</li>
-                        </ul>
-                    </div>
-                    <div style="flex: 1 0 50%;">
-                        <img src="images/lines-of-code.jpg" />
-                    </div>
-                </div>
+
+                <h3>Time &amp; Space</h3>
+                <h3>Unconstrained</h3>
+                <h3>Learning</h3>
+
+                <aside class="notes">
+
+                </aside>
+            </section>
+
+            <section data-background="images/fightclub.png">
+                <h2>Rules?</h2>
+                <br />
+
+                <h3>Pair-Programming &amp; TDD</h3>
+                <h3>Don't aim for finish</h3>
+                <h3>Fun!</h3>
+
             </section>
 
             <section>
@@ -78,50 +100,64 @@
                     <h4>Cover the code with tests, then refactor</h4>
                     <a href="https://github.com/sandromancuso/trip-service-kata">https://github.com/sandromancuso/trip-service-kata</a>
                 </section>
+
                 <section>
                     <h2>Find a partner</h2>
                     <p>... and agree on the language</p>
                     <h4>2'</h4>
                 </section>
+
                 <section>
                     <h2>Clone the repo</h2>
                     <p>Please setup the repo for your language of choice.</p>
                     <h4>10'</h4>
-                    <p><a href="https://github.com/sandromancuso/trip-service-kata">https://github.com/sandromancuso/trip-service-kata</a></p>
+                    <p>
+                        <a href="https://github.com/sandromancuso/trip-service-kata">https://github.com/sandromancuso/trip-service-kata</a>
+                    </p>
                 </section>
+
                 <section>
                     <h2>Suggested plan of attack</h2>
                     <img src="images/code-coverage-refactoring.png" />
                 </section>
+
                 <section>
                     <h2>First session</h2>
                     <h4>Aim for 100% code coverage</h4>
                     <h4>45'</h4>
                     <br />
-                    <p>Don't change production code!<br />Use only IDE assisted refactorings.</p>
+                    <p>Don't change production code!
+                        <br />Use only IDE assisted refactorings.</p>
                 </section>
+
                 <section>
                     <h2>Retrospective</h2>
                     <h4>Please stand up</h4>
                 </section>
+
                 <section>
                     <h2>Second session</h2>
                     <h4>Refactor code to remove code smells</h4>
                     <h4>45'</h4>
                 </section>
+
                 <section>
                     <h2>Retrospective</h2>
                     <h4>Please stand up</h4>
                 </section>
             </section>
+
             <section>
                 <h2>Thank you for joining!</h2>
                 <p>Follow #CodingDojoVie or @swkWien</p>
             </section>
+
             <section>
                 <h4>... one more thing</h4>
                 <h2>We're hiring</h2>
-                <h3><a href="https://jobs.linkresearchtools.com">jobs.linkresearchtools.com</a></h3>
+                <h3>
+                    <a href="https://jobs.linkresearchtools.com">jobs.linkresearchtools.com</a>
+                </h3>
             </section>
         </div>
     </div>
@@ -130,32 +166,32 @@
     <script src="reveal.js/js/reveal.min.js">/**/</script>
 
     <script>
-    //<![CDATA[
-    // Full list of configuration options available here:
-    // https://github.com/hakimel/reveal.js#configuration
-    Reveal.initialize({
-       controls: true,
-       progress: true,
-       history: true,
-       center: true,
+        //<![CDATA[
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
 
-       theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-       transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+            theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+            transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
 
-       // Optional libraries used to extend on reveal.js
-       dependencies: [
-          { src: 'reveal.js/lib/js/classList.js', condition: function () { return !document.body.classList; } },
-          { src: 'reveal.js/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
-          { src: 'reveal.js/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
-          { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
-          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function () { return !!document.body.classList; } },
-          { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function () { return !!document.body.classList; } }
-       ]
-    });
+            // Optional libraries used to extend on reveal.js
+            dependencies: [
+                { src: 'reveal.js/lib/js/classList.js', condition: function () { return !document.body.classList; } },
+                { src: 'reveal.js/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: 'reveal.js/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+                { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function () { return !!document.body.classList; } },
+                { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function () { return !!document.body.classList; } }
+            ]
+        });
 
     // setInterval(function() { Reveal.next(); }, 15000);
       // ]]>
     </script>
- </body>
+</body>
 
 </html>
