@@ -1,0 +1,280 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+
+    <title>Session 2018-03-27</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <link rel="stylesheet" href="reveal.js/css/reveal.min.css" />
+    <link rel="stylesheet" href="reveal.js/css/theme/sky.css" id="theme" />
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css" />
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+        //<![CDATA[
+        document.write('<link rel="stylesheet" href="reveal.js/css/print/' + (window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper') + '.css" type="text/css" media="print">');
+         //]]>
+    </script>
+
+    <style>
+        td.principle-name {
+            font-style: italic;
+        }
+    </style>
+
+    <!--[if lt IE 9]>
+       <script src="lib/js/html5shiv.js"></script>
+       <![endif]-->
+</head>
+
+<body>
+    <div class="reveal">
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section>
+                <h1>Coding Dojo Vienna</h1>
+                <br />
+                <img style="border:0;width:20%;" src="images/swkLogo.png" />
+                <h5>Softwerkskammer Wien</h5>
+                <br />
+
+                <p>
+                    Twitter: @swkWien &nbsp;&nbsp;/&nbsp;&nbsp; #CodingDojoVie
+                </p>
+                <p>
+                    <small>Sponsor and venue: LinkResearchTools @lnkresearchtool
+                        <br/>Facilitation: Bojan Bedrac @xbojch
+                        <br />Session 2018-06-18
+                    </small>
+                </p>
+            </section>
+
+            <section>
+                <section data-background="images/dojo-turmoil.png">
+                    <h2>Coding Dojo?</h2>
+                </section>
+
+                <section data-background="images/matrix-dojo.png">
+                    <h2>Coding Dojo!</h2>
+                    <br />
+    
+                    <h3>No fighting</h3>
+                    <br />
+                    <h3>Place for learning and practice</h3>
+                    <br />
+                    
+                    <ul>
+                        <li>Safe place outside of work and away from production code</li>
+                        <li>Deliberate Practice => Learning</li>
+                        <li>Relax and Slow down</li>
+                        <li>You don't have to finish</li>
+                        <li>Focus on doing it right</li>
+                    </ul>
+                </section>
+
+                <section data-background="images/fightclub.png">
+                    <h2>Rules?</h2>
+                    <br />
+    
+                    <h3>Pair-Programming &amp; TDD</h3>
+                    <h3>Don't aim to finish</h3>
+                    <h3>Fun!</h3>
+    
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2>Find a partner</h2>
+                    <p>... and agree on the language</p>
+                    <h4>2'</h4>
+                </section>
+
+                
+
+                <section>
+                    <h2>Object calisthenics</h2>
+                    <h3 style="text-transform: none;">(pick at least 2 constraints)</h3>
+                    <br />
+
+                    <ol>
+                        <li>One level of indentation per method.</li>
+                        <li>Don't use the ELSE keyword.</li>
+                        <li>Wrap all primitives and Strings in classes.</li>
+                        <li>First class collections.</li>
+                        <li>One dot per line.</li>
+                        <li>Don't abbreviate.</li>
+                        <li>Keep all classes less than 50 lines.</li>
+                        <li>No classes with more than two instance variables.</li>
+                        <li>No getters or setters.</li>
+                    </ol>
+                </section>
+
+                
+
+                <section>
+                    <img src="images/mission-impossible.jpg" width="300" />
+                    <h4>Your mission, should you choose to accept it ...</h4>
+                </section>
+
+                <section style="text-align: left;">
+                    <h3 style="text-transform: none;">
+                        A famous casino is suddenly faced with a sharp decline of their revenues.
+                        <br /><br />They decide to offer Texas hold'em also online.
+                        <br /><br />Can you help them by writing an algorithm that can rank poker hands?
+                    </h3>
+                </section>
+
+                <section>
+                    <h2>Ranking Poker Hands</h2>
+                    <img src="images/texas-holdem-poker.jpg" width="80%" />
+                </section>
+
+                <section>
+                        <h2>Task</h2>
+
+                        <div style="text-align: left;">
+                            Create a poker hand that has a method to compare itself to another poker hand:
+                            <pre><code data-trim data-noescape>Result PokerHand.compareWith(PokerHand hand);</code></pre>
+                        </div>
+
+                        <div style="text-align: left;">
+                            A poker hand has a constructor that accepts a string containing 5 cards:
+                            <pre><code data-trim data-noescape>PokerHand hand = new PokerHand("KS 2H 5C JD TD");</code></pre>
+                        </div>
+
+
+                        <div style="text-align: left;">
+                            The result of your poker hand comparison can be one of these 3 options:
+                            <pre><code data-trim data-noescape>
+public enum Result
+{
+    WIN,
+    LOSS,
+    TIE
+}
+                            </code></pre>
+                        </div>
+                </section>
+
+                <section>
+                    <h2>String of cards</h2>
+                    <br />
+                    <ul>
+                        <li>A space is used as the card separator</li>
+                        <br />
+                        <li>Each card consists of two characters</li>
+                        <br />
+                        <li>The first character is the <strong>value of the card</strong>, valid characters are:
+<pre><code>2, 3, 4, 5, 6, 7, 8, 9, T(en), J(ack), Q(ueen), K(ing), A(ce)</code></pre></li>
+<br />
+                        <li>The second character represents <strong>the suit</strong>, valid characters are:
+<pre><code>S(pades), H(earts), D(iamonds), C(lubs)</code></pre></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <img src="images/lets-fight.gif" width="80%" />
+                    <h2>Let's fight</h2>
+                </section>
+
+                <section>
+                    <h2>First session</h2>
+                    <h4>Get familiar with the problem</h4>
+                    <h4>45'</h4>
+                </section>
+
+                <section style="width: 1100px">
+                    <h5>Sample tests</h5>
+                    <pre><code data-trim data-noescape>
+Test("Highest straight flush wins",        loss, "2H 3H 4H 5H 6H", "KS AS TS QS JS");
+Test("Straight flush wins a 4 of a kind",  win,  "2H 3H 4H 5H 6H", "AS AD AC AH JD");
+Test("Highest 4 of a kind wins",           win,  "AS AH 2H AD AC", "JS JD JC JH 3D");
+Test("4 of a kind wins a full house",      loss, "2S AH 2H AS AC", "JS JD JC JH AD");
+Test("Full house wins a flush",            win,  "2S AH 2H AS AC", "2H 3H 5H 6H 7H");
+Test("Highest flush wins",                 win,  "AS 3S 4S 8S 2S", "2H 3H 5H 6H 7H");
+Test("Flush wins a straight",              win,  "2H 3H 5H 6H 7H", "2S 3H 4H 5S 6C");
+Test("Equal straight is tie",              tie,  "2S 3H 4H 5S 6C", "3D 4C 5H 6H 2S");
+Test("Straight wins a three of a kind",    win,  "2S 3H 4H 5S 6C", "AH AC 5H 6H AS");
+Test("3 of a kind wins two pairs",         loss, "2S 2H 4H 5S 4C", "AH AC 5H 6H AS");
+Test("2 pairs wins 1 pair",                win,  "2S 2H 4H 5S 4C", "AH AC 5H 6H 7S");
+Test("Highest pair wins",                  loss, "6S AD 7H 4S AS", "AH AC 5H 6H 7S");
+Test("Pair wins nothing",                  loss, "2S AH 4H 5S KC", "AH AC 5H 6H 7S");
+Test("Highest card loses",                 loss, "2S 3H 6H 7S 9C", "7H 3C TH 6H 9S");
+Test("Highest card wins",                  win,  "4S 5H 6H TS AC", "3S 5H 6H TS AC");
+Test("Equal cards is tie",                 tie,  "2S AH 4H 5S 6C", "AD 4C 5H 6H 2C");
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>Retrospective</h2>
+                    <h4>Please stand up</h4>
+                </section>
+
+                <section>
+                    <h2>Second session</h2>
+                    <h4>Continue</h4>
+                    <h4>45'</h4>
+                </section>
+
+                <section>
+                    <h2>Retrospective</h2>
+                    <h4>Please stand up</h4>
+                </section>
+            </section>
+
+            <section>
+                <h2>Thank you for joining!</h2>
+                <p>Follow #CodingDojoVie or @swkWien</p>
+            </section>
+
+            <section>
+                <h4>... one more thing</h4>
+                <h2>We're hiring</h2>
+                <h3>
+                    <a href="https://jobs.linkresearchtools.com">jobs.linkresearchtools.com</a>
+                </h3>
+            </section>
+        </div>
+    </div>
+
+    <script src="reveal.js/lib/js/head.min.js">/**/</script>
+    <script src="reveal.js/js/reveal.min.js">/**/</script>
+
+    <script>
+        //<![CDATA[
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+            transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+            // Optional libraries used to extend on reveal.js
+            dependencies: [
+                { src: 'reveal.js/lib/js/classList.js', condition: function () { return !document.body.classList; } },
+                { src: 'reveal.js/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: 'reveal.js/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+                { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function () { return !!document.body.classList; } },
+                { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function () { return !!document.body.classList; } }
+            ]
+        });
+
+    // setInterval(function() { Reveal.next(); }, 15000);
+      // ]]>
+    </script>
+</body>
+
+</html>
