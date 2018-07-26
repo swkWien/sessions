@@ -1,0 +1,225 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+
+    <title>Session 2018-03-27</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <link rel="stylesheet" href="reveal.js/css/reveal.min.css" />
+    <link rel="stylesheet" href="reveal.js/css/theme/sky.css" id="theme" />
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css" />
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+        //<![CDATA[
+        document.write('<link rel="stylesheet" href="reveal.js/css/print/' + (window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper') + '.css" type="text/css" media="print">');
+         //]]>
+    </script>
+
+    <style>
+        td.principle-name {
+            font-style: italic;
+        }
+    </style>
+
+    <!--[if lt IE 9]>
+       <script src="lib/js/html5shiv.js"></script>
+       <![endif]-->
+</head>
+
+<body>
+    <div class="reveal">
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section>
+                <h1>Coding Dojo Vienna</h1>
+                <br />
+                <img style="border:0;width:20%;" src="images/swkLogo.png" />
+                <h5>Softwerkskammer Wien</h5>
+                <br />
+
+                <p>
+                    Twitter: @swkWien &nbsp;&nbsp;/&nbsp;&nbsp; #CodingDojoVie
+                </p>
+                <p>
+                    <small>Sponsor and venue: Willhaben @willhaben @willhabentech
+                        <br/>Facilitation: Martin Lemanski
+                        <br/>Session 2018-07-26
+                    </small>
+                </p>
+            </section>
+
+            <section>
+                <h2>Coding Dojo?</h2>
+
+                <aside class="notes">
+                    No fighting; Place for learning and practice
+                    <ul>
+                        <li>Safe place outside of work and away from production code</li>
+                        <li>Deliberate Practice => Learning</li>
+                        <li>Relax and Slow down</li>
+                        <li>You don't have to finish</li>
+                        <li>Focus on doing it right</li>
+                        <li>Room for mistakes</li>
+                    </ul>
+                </aside>
+            </section>
+
+            <section>
+                <h2>Coding Dojo!</h2>
+                <br />
+
+                <h3>Time &amp; Space</h3>
+                <h3>Unconstrained</h3>
+                <h3>Learning</h3>
+
+                <aside class="notes">
+
+                </aside>
+            </section>
+
+            <section>
+                <h2>Rules?</h2>
+                <br />
+
+                <h3>Pair-Programming</h3>
+                <h3>Don't aim for finish</h3>
+                <h3>Fun!</h3>
+
+            </section>
+
+            <section>
+                <section>
+                    <h2>Kata</h2>
+                    <h4>Small Steps, training</h4>
+                    <h4>not just for Coding</h4>
+                </section>
+                <section>
+                    <h2>Download Tennis refactoring kata</h2>
+                    <p><a href="https://github.com/emilybache/Tennis-Refactoring-Kata">https://github.com/emilybache/Tennis-Refactoring-Kata</a> </p>
+                </section>
+                <section>
+                    <h2>Szenario</h2>
+                    <p>Imagine you work for a consultancy company, and one of your colleagues has been doing some work for the Tennis Society.
+                        The contract is for <b>10 hours billable work</b>, and <b>your colleague has spent 8.5 hours working</b> on it.
+                        Unfortunately he has now fallen ill. Your boss has asked you to take over from him.
+                        She <b>wants you to spend an hour or so on the code</b> so she can bill the client for the full 10 hours.
+                        She instructs you to <b>tidy up the code</b> a little and perhaps make some notes so you can <b>give your colleague some feedback</b> on his chosen design.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Tennis Rules</h2>
+                    <p>
+                        You can read more about Tennis scores <a href="http://en.wikipedia.org/wiki/Tennis#Scoring">here</a> which is summarized below: <br>
+                        <br>
+                        <ol>
+                            <li>A game is won by the first player to have won at least four points in total and at least two points more than the opponent.</li>
+                            <li>The running score of each game is described in a manner peculiar to tennis: scores from zero to three points are described as "Love", "Fifteen", "Thirty", and "Forty" respectively.</li>
+                            <li>If at least three points have been scored by each player, and the scores are equal, the score is "Deuce".</li>
+                            <li>If at least three points have been scored by each side and a player has one more point than his opponent, the score of the game is "Advantage" for the player in the lead.</li>
+                        </ol>
+                    </p>
+                </section>
+                <section>
+                    <h2>Find a partner</h2>
+                    <p>... and agree on the language</p>
+                    <h4>2'</h4>
+                </section>
+
+                <section>
+                    <h2>First session</h2>
+                    <h3 style="text-transform: none;">Identify at least two code-smells and tidy them up</h3>
+                    <h4>45'</h4>
+                    <br />
+                </section>
+
+                <section>
+                    <h2>Additional constraints</h2>
+                    <ol>
+                        <li>One level of indentation per method.</li>
+                        <li>Don't use the ELSE keyword.</li>
+                        <li>Wrap all primitives and Strings in classes.</li>
+                        <li>First class collections.</li>
+                        <li>One dot per line.</li>
+                        <li>Don't abbreviate.</li>
+                        <li>Keep all classes less than 50 lines.</li>
+                        <li>No classes with more than two instance variables.</li>
+                        <li>No getters or setters.</li>
+                    </ol>
+                </section>
+
+                <section>
+                    <h2>Retrospective</h2>
+                    <h4>Please stand up</h4>
+                </section>
+
+                <section>
+                    <h2>Second session</h2>
+                    <h4>Repeat, but with Mikado-Method</h4>
+                    <h4>45'</h4>
+                    <br>
+                </section>
+
+                <section>
+                    <h2>Retrospective</h2>
+                    <h4>Please stand up</h4>
+                </section>
+            </section>
+
+            <section>
+                <h2>Thank you for participating!</h2>
+                <p>Follow <a href="https://twitter.com/hashtag/CodingDojoVie">#CodingDojoVie</a> or <a href="https://twitter.com/swkWien">@swkWien</a></p>
+                <p>Follow me on Twitter <a href="https://twitter.com/martin_lemanski">@martin_lemanski</a></p>
+            </section>
+
+            <section>
+                <h2>Willhaben is hiring</h2>
+                <h3>
+                    <a href="https://jobsbei.willhaben.at/">jobsbei.willhaben.at</a>
+                </h3>
+                <img style="border:0;width:100%;" src="images/jobs-at-willhaben-2018-04.png" />
+            </section>
+        </div>
+    </div>
+
+    <script src="reveal.js/lib/js/head.min.js">/**/</script>
+    <script src="reveal.js/js/reveal.min.js">/**/</script>
+
+    <script>
+        //<![CDATA[
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+            transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+            // Optional libraries used to extend on reveal.js
+            dependencies: [
+                { src: 'reveal.js/lib/js/classList.js', condition: function () { return !document.body.classList; } },
+                { src: 'reveal.js/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: 'reveal.js/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+                { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function () { return !!document.body.classList; } },
+                { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function () { return !!document.body.classList; } }
+            ]
+        });
+
+    // setInterval(function() { Reveal.next(); }, 15000);
+      // ]]>
+    </script>
+</body>
+
+</html>
