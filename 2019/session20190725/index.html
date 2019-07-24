@@ -1,0 +1,326 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+
+    <title>Session 2019-07-25</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <link rel="stylesheet" href="reveal.js/css/reveal.min.css" />
+    <link rel="stylesheet" href="reveal.js/css/theme/sky.css" id="theme" />
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css" />
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+        //<![CDATA[
+        document.write('<link rel="stylesheet" href="reveal.js/css/print/' + (window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper') + '.css" type="text/css" media="print">');
+         //]]>
+    </script>
+
+    <style>
+        td.principle-name {
+            font-style: italic;
+        }
+    </style>
+
+    <!--[if lt IE 9]>
+       <script src="lib/js/html5shiv.js"></script>
+       <![endif]-->
+</head>
+
+<body>
+    <div class="reveal">
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section>
+                <h1>Coding Dojo Vienna</h1>
+                <br />
+                <img style="border:0;width:20%;" src="images/swkLogo.png" />
+                <h5>Softwerkskammer Wien</h5>
+                <br />
+
+                <p>
+                    Twitter: @swkWien &nbsp;&nbsp;/&nbsp;&nbsp; #CodingDojoVie
+                </p>
+                <p>
+                    <small>Sponsor and venue: LinkResearchTools @lnkresearchtool
+                        <br/>Facilitation: Bojan Bedrac @xbojch
+                        <br />Session 2019-07-25
+                    </small>
+                </p>
+            </section>
+
+            <section>
+                <section data-background="images/dojo-turmoil.png">
+                    <h2>Coding Dojo?</h2>
+                </section>
+
+                <section data-background="images/matrix-dojo.png">
+                    <h2>Coding Dojo!</h2>
+                    <br />
+    
+                    <h3>No fighting</h3>
+                    <br />
+                    <h3>Place for learning and practice</h3>
+                    <br />
+                    
+                    <ul>
+                        <li>Safe place outside of work and away from production code</li>
+                        <li>Deliberate Practice => Learning</li>
+                        <li>Relax and Slow down</li>
+                        <li>You don't have to finish</li>
+                        <li>Focus on doing it right</li>
+                    </ul>
+                </section>
+
+                <section data-background="images/fightclub.png">
+                    <h2>Rules?</h2>
+                    <br />
+    
+                    <h3>Pair-Programming &amp; TDD</h3>
+                    <h3>Don't aim to finish</h3>
+                    <h3>Keep it fun!</h3>
+    
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2>Poka-Yoke</h2>
+                    <br />
+                    <p>
+                        A poka-yoke is any mechanism in any process that helps an equipment operator avoid (yokeru) mistakes (poka).
+                        Its purpose is to eliminate product defects by preventing, correcting, or drawing attention to human errors as they occur.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Everyday life examples</h2>
+                    <br />
+                    <ul>
+                        <li>Car safety features</li>
+                        <li>Treadmills</li>
+                        <li>Microwaves, washing machines, dishwashers, and other household appliances</li>
+                        <li>Elevators & garage doors</li>
+                        <li>Spell-check functions</li>
+                        <li>Power outlets and USB plugs</li>
+                        <li>Overflow outlets in sinks</li>
+                    </ul>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2>Find a partner</h2>
+                    <p>... and agree on the language</p>
+                    <h4>2'</h4>
+                </section>
+
+                <section>
+                    <h2>Clone the repo</h2>
+                    <p>BugsZero kata</p>
+                    <p><a href="https://github.com/martinsson/BugsZero-Kata">https://github.com/martinsson/BugsZero-Kata</a></p>
+                </section>
+
+                <section>
+                    <img src="images/lets-fight.gif" width="80%" />
+                    <h2>Let's fight</h2>
+                </section>
+
+                <section>
+                    <h2>Dip your toes</h2>
+                    <h4>Explore the code and tests</h4>
+                    <h4>10'</h4>
+                </section>
+
+                <section>
+                    <h2>First session</h2>
+                    <h4>Let's go for a swim</h4>
+                    <h4>35'</h4>
+                </section>
+
+                <section>
+                    <h2>Retrospective</h2>
+                    <h4>Please stand up</h4>
+                </section>
+
+                <section>
+                    <h2>Second session</h2>
+                    <h4>Deep dive</h4>
+                    <h4>45'</h4>
+                </section>
+
+                <section>
+                    <h2>Retrospective</h2>
+                    <h4>Please stand up</h4>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2>Bug patterns</h2>
+                </section>
+                
+                <section>
+                    <h3>Duplication</h3>
+                    <p>If one occurence of the duplication changes, the others have to change as well. Risk is increased with the distance between the duplicated parts.</p>
+                </section>
+
+                <section>
+                    <h3>Use of primitives</h3>
+                    <p>
+                        Allows for
+                        <ul>
+                            <li>logic potentially duplicated</li>
+                            <li>no business constraints, for instance</li>
+                            <li>a persons age must be positive</li>
+                            <li>an interest rate of 2 does it mean 2% or 200%?</li>
+                            <li>inverted parameters possible</li>
+                            <li>invalid values</li>
+                        </ul>
+                        </p>
+                </section>
+
+                <section>
+                    <h3>Exposed internals</h3>
+                    <p>
+                        An object has its internals exposed. Aka FeatureEnvy.
+                        Allows for
+                        <ul>
+                            <li>logic potentially duplicated</li>
+                            <li>low cohesion between logic and data</li>
+                        </ul>
+                    </p>
+                </section>
+
+                <section>
+                    <h3>Non constrained construction</h3>
+                    <ul>
+                        <li>Mandatory parameters not in constructor</li>
+                        <li>Primitive parameters, allows for swapping order</li>
+                        <ul>
+                            <li>type parameters</li>
+                            <li>use builder</li>
+                        </ul>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Temporal coupling</h3>
+                    <p>
+                        Use of functions have to be done in a certain order and that order is not enforced by structure (interpretation/compilation).
+                        Trap: using exceptions instead of enforcing structure.
+                    </p>
+                </section>
+
+                <section>
+                    <h3>Hidden testable code</h3>
+                    <p>
+                        Code that would be easy to test is hidden in between calls to difficult-to-test dependencies.
+                        Hidden testable code is likely to contain bugs or generate them in the future.
+                        Extract Pure Function (easy to test) is the refactoring to apply.
+                    </p>
+                </section>
+
+                <section>
+                    <h3>Late validations - source of unnecessary exceptions</h3>
+                    <ul>
+                        <li>ex: if (myservice == null). Probably useless validation</li>
+                        <li>ex: validation of instance parameters in function (should be in constructor)</li>
+                        <li>any validation that is not in the entry point of an application (rest call, ui-form, command-line, message bus, configuration). Database could be an entry point if data comes from other apps.</li>
+                        <li>any duplicated validation down the callstack</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Null flag</h3>
+                    <p>
+                        Returning null as a special value provides no guarantee that the client code will handle that case.
+                        It is likely to end up in a runtime exception.
+                        Instead use a Null-object-pattern so the client code never has to worry, or return an Optional/Maybe so that the client code is aware of the possibility.
+                    </p>
+                </section>
+
+                <section>
+                    <h3>Exception handling</h3>
+                    <p>
+                        When you look closely much of exception handling is accidental, not essential.
+                        <ul>
+                            <li>adds complexity, often not essential complexity</li>
+                            <li>throw to the "top" is better</li>
+                            <li>try to make the exception impossible instead of handling it (ex, temporal coupling)</li>
+                        </ul>
+                    </p>
+                </section>
+
+                <section>
+                    <h3>Use of indices</h3>
+                    <ul>
+                        <li>Off-by-one errors is common</li>
+                        <li>index out of bounds</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Business rules incoherent with data structure</h3>
+                    <ul>
+                        <li>ex: list for a set of colours - duplicated colours</li>
+                        <li>Solution: validate data and build Business Objects ASAP</li>
+                    </ul>
+                </section>
+            </section>
+
+            <section>
+                <h2>Thank you for joining!</h2>
+                <p>Follow #CodingDojoVie or @swkWien</p>
+            </section>
+
+            <section>
+                <h4>... one more thing</h4>
+                <h2>We're hiring</h2>
+                <h3>
+                    <a href="https://jobs.linkresearchtools.com">jobs.linkresearchtools.com</a>
+                </h3>
+            </section>
+        </div>
+    </div>
+
+    <script src="reveal.js/lib/js/head.min.js">/**/</script>
+    <script src="reveal.js/js/reveal.min.js">/**/</script>
+
+    <script>
+        //<![CDATA[
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+            transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+            // Optional libraries used to extend on reveal.js
+            dependencies: [
+                { src: 'reveal.js/lib/js/classList.js', condition: function () { return !document.body.classList; } },
+                { src: 'reveal.js/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: 'reveal.js/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+                { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function () { return !!document.body.classList; } },
+                { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function () { return !!document.body.classList; } }
+            ]
+        });
+
+    // setInterval(function() { Reveal.next(); }, 15000);
+      // ]]>
+    </script>
+</body>
+
+</html>
