@@ -1,0 +1,113 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+
+    <title>Session 2019-10-16</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <link rel="stylesheet" href="reveal.js/css/reveal.min.css" />
+    <link rel="stylesheet" href="reveal.js/css/theme/sky.css" id="theme" />
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css" />
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+        //<![CDATA[
+        document.write('<link rel="stylesheet" href="reveal.js/css/print/' + (window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper') + '.css" type="text/css" media="print">');
+         //]]>
+    </script>
+
+    <style>
+        td.principle-name {
+            font-style: italic;
+        }
+    </style>
+
+    <!--[if lt IE 9]>
+       <script src="lib/js/html5shiv.js"></script>
+       <![endif]-->
+</head>
+
+<body>
+    <div class="reveal">
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section>
+                <h1>Coding Dojo Vienna</h1>
+                <br />
+                <img style="border:0;width:20%;box-shadow: none" src="images/swkLogo.png" />
+                <h5>Softwerkskammer Wien</h5>
+                <br />
+
+                <p>
+                    Twitter: @swkWien &nbsp;&nbsp;/&nbsp;&nbsp; #CodingDojoVie
+                </p>
+                <p>
+                    <small>Sponsor and venue: ebcont @ebcont_it
+                        <br/>Facilitation: Gregor Riegler @gregor_riegler
+                        <br />Session 2019-10-16
+                    </small>
+                </p>
+            </section>
+
+            <section>
+                <h2>Coding Dojo!</h2>
+                <ul>
+                    <li>Away from the pressure of 'getting things done'.</li>
+                    <li>Slow down, and do it right!</li>
+                    <li>Deliberate Practice!</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Split-Phase Refactoring</h2>
+                <br />
+                <ul>
+                    <li>Code: https://github.com/emilybache/Theatrical-Players-Refactoring-Kata</li>
+                    <li>Goal: Split the Phases to add an html printer</li>
+                    <li>1st Session: get in touch with the kata</li>
+                    <li>2nd Session: maximize automated refactorings!</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <script src="reveal.js/lib/js/head.min.js">/**/</script>
+    <script src="reveal.js/js/reveal.min.js">/**/</script>
+
+    <script>
+        //<![CDATA[
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+            transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+            // Optional libraries used to extend on reveal.js
+            dependencies: [
+                { src: 'reveal.js/lib/js/classList.js', condition: function () { return !document.body.classList; } },
+                { src: 'reveal.js/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: 'reveal.js/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+                { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function () { return !!document.body.classList; } },
+                { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function () { return !!document.body.classList; } }
+            ]
+        });
+
+    // setInterval(function() { Reveal.next(); }, 15000);
+      // ]]>
+    </script>
+</body>
+
+</html>
