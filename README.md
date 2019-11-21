@@ -1,6 +1,6 @@
-# Softwerkskammer Wien - Workshop Sessions
+# Softwerkskammer Wien - Coding Dojo Sessions
 
-This repository contains the presentations for the workshop sessions of Softwerkskammer Wien, including the "Coding Dojo Vienna" ones. The presentations can come in various formats, depending on the moderator that held the sessions.
+This repository contains the presentations for the Coding Dojo sessions of Softwerkskammer Wien, including the older "Coding Dojo Vienna" ones. The presentations come in various formats, depending on the moderator that held the sessions.
 
 Refer to the online [wiki](https://github.com/swkWien/sessions/wiki) on how to organize and prepare for a new session.
 
