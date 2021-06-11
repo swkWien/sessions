@@ -1,3 +1,3 @@
-## Session 2020-07-27
+## Session 20200727
 
-Topic: String Calculator as per https://osherove.com/tdd-kata-1
+Topic: [String Calculator](https://osherove.com/tdd-kata-1)
