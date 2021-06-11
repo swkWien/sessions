@@ -1,1 +1,1 @@
-## Global Day of Coderetreat 2018 ##
+## Global Day of Coderetreat 2018
