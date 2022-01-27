@@ -1,0 +1,48 @@
+<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        width="470px" height="200px"
+        viewBox="0 0 600 250" >
+
+<!--
+  Author: Paul J. DeMarco 
+  Email : pjdemarco@gmail.com
+  Date  : 11/30/2016
+  This is an image of a binary search execution timing diagram.  
+  This image is in the public domain.
+-->
+<defs>
+    <marker id="green_arrow" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#559955" />
+    </marker>
+    <marker id="blue_arrow" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#5555ff" />
+    </marker>
+  </defs>
+<rect x="0" y="200" height="35" width="35" style="stroke:#888888; fill: rgba(0,0,255,0.05)"></rect>
+<text font-size="15" x="10" y="225" fill="black">1</text><text font-size="6" x="2" y="233" fill="black">0</text><rect x="35" y="200" height="35" width="35" style="stroke:#888888; fill: rgba(0,0,255,0.05)"></rect>
+<text font-size="15" x="45" y="225" fill="black">3</text><text font-size="6" x="37" y="233" fill="black">1</text><rect x="70" y="200" height="35" width="35" style="stroke:#888888; fill: rgba(0,0,255,0.05)"></rect>
+<text font-size="15" x="80" y="225" fill="black">4</text><text font-size="6" x="72" y="233" fill="black">2</text><rect x="105" y="200" height="35" width="35" style="stroke:#888888; fill: rgba(0,0,255,0.05)"></rect>
+<text font-size="15" x="115" y="225" fill="black">6</text><text font-size="6" x="107" y="233" fill="black">3</text><rect x="140" y="200" height="35" width="35" style="stroke:#888888; fill: rgba(0,0,255,0.05)"></rect>
+<text font-size="15" x="150" y="225" fill="black">7</text><text font-size="6" x="142" y="233" fill="black">4</text><rect x="175" y="200" height="35" width="35" style="stroke:#888888; fill: rgba(0,0,255,0.05)"></rect>
+<text font-size="15" x="185" y="225" fill="black">8</text><text font-size="6" x="177" y="233" fill="black">5</text><rect x="210" y="200" height="35" width="35" style="stroke:#888888; fill: rgba(0,0,255,0.05)"></rect>
+<text font-size="15" x="220" y="225" fill="black">10</text><text font-size="6" x="212" y="233" fill="black">6</text><rect x="245" y="200" height="35" width="35" style="stroke:#888888; fill: rgba(0,0,255,0.05)"></rect>
+<text font-size="15" x="255" y="225" fill="black">13</text><text font-size="6" x="247" y="233" fill="black">7</text><rect x="280" y="200" height="35" width="35" style="stroke:#888888; fill: rgba(0,0,255,0.05)"></rect>
+<text font-size="15" x="290" y="225" fill="black">14</text><text font-size="6" x="282" y="233" fill="black">8</text><rect x="315" y="200" height="35" width="35" style="stroke:#888888; fill: rgba(0,0,255,0.05)"></rect>
+<text font-size="15" x="325" y="225" fill="black">18</text><text font-size="6" x="317" y="233" fill="black">9</text><rect x="350" y="200" height="35" width="35" style="stroke:#888888; fill: rgba(0,0,255,0.05)"></rect>
+<text font-size="15" x="360" y="225" fill="black">19</text><text font-size="6" x="352" y="233" fill="black">10</text><rect x="385" y="200" height="35" width="35" style="stroke:#888888; fill: rgba(0,0,255,0.05)"></rect>
+<text font-size="15" x="395" y="225" fill="black">21</text><text font-size="6" x="387" y="233" fill="black">11</text><rect x="420" y="200" height="35" width="35" style="stroke:#888888; fill: rgba(0,0,255,0.05)"></rect>
+<text font-size="15" x="430" y="225" fill="black">24</text><text font-size="6" x="422" y="233" fill="black">12</text><rect x="455" y="200" height="35" width="35" style="stroke:#888888; fill: rgba(0,0,255,0.05)"></rect>
+<text font-size="15" x="465" y="225" fill="black">37</text><text font-size="6" x="457" y="233" fill="black">13</text><rect x="490" y="200" height="35" width="35" style="stroke:#888888; fill: rgba(0,0,255,0.05)"></rect>
+<text font-size="15" x="500" y="225" fill="black">40</text><text font-size="6" x="492" y="233" fill="black">14</text><rect x="525" y="200" height="35" width="35" style="stroke:#888888; fill: rgba(0,0,255,0.05)"></rect>
+<text font-size="15" x="535" y="225" fill="black">45</text><text font-size="6" x="527" y="233" fill="black">15</text><rect x="560" y="200" height="35" width="35" style="stroke:#888888; fill: rgba(0,0,255,0.05)"></rect>
+<text font-size="15" x="570" y="225" fill="black">71</text><text font-size="6" x="562" y="233" fill="black">16</text><line x1="297.5" y1="0" x2="297.5" y2="32" stroke="#5555ff" stroke-width="2" marker-end="url(#blue_arrow)" />
+<line style="stroke:rgb(0,0,0); stroke-width:2;" stroke-dasharray="5, 5" x1="297.5" y1="50" x2="297.5" y2="200"></line>
+<line x1="122.5" y1="50" x2="122.5" y2="82" stroke="#5555ff" stroke-width="2" marker-end="url(#blue_arrow)" />
+<line style="stroke:rgb(0,0,0); stroke-width:2;" stroke-dasharray="5, 5" x1="122.5" y1="100" x2="122.5" y2="200"></line>
+<line x1="297.5" y1="50" x2="122.5" y2="50" stroke="#5555ff" stroke-width="2" />
+<line x1="192.5" y1="100" x2="192.5" y2="132" stroke="#5555ff" stroke-width="2" marker-end="url(#blue_arrow)" />
+<line style="stroke:rgb(0,0,0); stroke-width:2;" stroke-dasharray="5, 5" x1="192.5" y1="150" x2="192.5" y2="200"></line>
+<line x1="122.5" y1="100" x2="192.5" y2="100" stroke="#5555ff" stroke-width="2" />
+<line x1="157.5" y1="150" x2="157.5" y2="182" stroke="#559955" stroke-width="2" marker-end="url(#green_arrow)" />
+<line style="stroke:rgb(0,0,0); stroke-width:2;" stroke-dasharray="5, 5" x1="157.5" y1="200" x2="157.5" y2="200"></line>
+<line x1="192.5" y1="150" x2="157.5" y2="150" stroke="#559955" stroke-width="2" />
+<text font-size="" x="315" y="57.5" fill="black">7&lt;14</text><text font-size="" x="70" y="107.5" fill="black">7&gt;6</text><text font-size="" x="210" y="157.5" fill="black">7&lt;8</text></svg>
