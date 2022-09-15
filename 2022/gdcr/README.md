@@ -11,8 +11,22 @@
 
 ## Meeting Minutes
 
-### 2022-09-15 Orga
+### 2022-09-16 Program Discussion
 
+#### Participants
+- ...
+
+#### Notes
+- ...
+
+#### TODO/TBD
+- ...
+
+#### FOLLOW UP
+- ...
+
+
+### 2022-09-15 Orga
 
 #### Participants
 - Roland
