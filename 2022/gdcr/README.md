@@ -6,24 +6,112 @@
 
 - Date: TODO
 - Location: TODO
+- Title: TODO
+- Tagline: TODO
+- Schedule: https://docs.google.com/spreadsheets/d/1LZTn6zvJuXAMqxj3W5W8Th6H8htvVfU4Z-XXorQW65w/edit?usp=sharing
 - Links:
   - TODO
+
+## Program
+
+TODO
 
 ## Meeting Minutes
 
 ### 2022-09-16 Program Discussion
 
 #### Participants
-- ...
+- Adam
+- Claus
+- Katrin
+- Peter
+- Rea
+- Roland
 
 #### Notes
-- ...
+- Kurze Vorstellungsrunde
+- Peter, hast du an jemanden gedacht bei "Budget für Facilitator"? Zu spät, machen wir selber. Als Idee für nächstes Jahr andenken. Reisebudget + Entschädigung (500€?); auch Verhandlungssache, cool, weil dann gäbe es was neues. Für heuer kein TODO.
+- Was ist eure Meinung zu Covid Policy? Amtliche Vorgaben. Bitte testen aber nicht prüfen?
+- Wir planen Webseite als primären Einstiegspunkt. Jemand Einwände? Kein Einwände. Landing Page ;)
+- Mögliche Themen
+  - **Hexagonal**
+  - OO vs FP
+  - *Brutal*
+- Diskussion zum Thema
+  - Hexagonal zu anspruchsvoll? Was spricht Personen an?
+- Hexagonal für Beginner, Aspekte
+  - Separation of Concerns
+  - Decoupling
+  - Dependency Injection
+  - Inversion of Control
+- Fokus: Software Design
+  - Wir enden bei Hexagonaler Architektur
+- Welches Kata?
+  - Wir nehmen das selbe Kata.
+  - Das selbe für den ganzen Tag?
+  - Falls es Sinn macht, das Kata wechseln
+- Timetable: copy-pase letztes Jahr
+- Siehe auch https://github.com/swkWien/sessions/issues/85
+- Notes from GDCR 2021 https://docs.google.com/document/d/1ya50ifaiG8a2b6_J-oypsIHfTrMrDF20lu4ekC_TPZI
+
+#### Sketch
+
+**Kata**
+
+TBD
+Bspw. Snake
+Multiplayer
+
+**1. Session: Pen and Paper**
+
+kürzere Session
+
+Constraint/Frage:
+Welche Aktionen gibt es? Evtl. geben wir Kategorien vor. Dann ergeben sich vielleicht Aspekte die man später trennen möchte.
+Welche Subdomains gibt es?
+Welche Events gibt es?
+Welche Akteure gibt es?
+Welche Concerns gibt es?
+Analyse.
+
+**2. Session: TDD (Outside in für alle die wollen)**
+
+TDD, Pair Programming mit Ping Pong
+Optional: plus Design Constraint
+
+**3. Session: Dependency Injection**
+
+Viele Kollaborateure weil kleine Units (wenig Zeilen, wenig Attribute, Object Calisthenics, ...)
+Alle Kollaborateure im Konstruktor.
+
+**4. Session: Inversion of Control (beachten Mittagspause)**
+
+Wir wollen, dass man Interfaces verwendet (depend on abstraction)
+Domain Logik darf keine konkrete Abhängigkeit auf I/O oder andere System Boundaries haben.
+
+Steuern, an welchem Teil man arbeiten soll (Aspekt vorgeben), damit man schnell ein Interface braucht
+Geben einen Teil der Architektur vor
+
+**5. Session: Ports and Adapters**
+
+TDD outside in
+Ports and Adapters
+Im Sinn von
+
+https://github.com/swkBerlin/ports-and-adapters
+
+- The application itself does not depend directly on any external systems, but only on ports
+- The protocol for a port is given by the purpose of the conversation it describes
+- For each external system there is an ‘’adapter’’ that converts the API definition to the format needed by that system and vice versa
+
 
 #### TODO/TBD
-- ...
+- Landing Page erstellen (Claus, Rea, noch wer?)
+- Landing Page auf GDCR-Seite verlinken
+-
 
 #### FOLLOW UP
-- ...
+- Restliche Details
 
 
 ### 2022-09-15 Orga
