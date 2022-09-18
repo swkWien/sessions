@@ -2,15 +2,15 @@
 
 ## Schedule
 
-- 08:45 - 09:00 Welcome
-- 09:00 - 09:15 Check-in
-- 09:15 - 09:45 Topics
-- 09:45 - 10:55 Session 1 - 1h
-- 10:55 - 11:05 Small Break
-- 11:30 - 12:40 Session 2 - 1h
-- 12:40 - 13:40 Lunch Break
-- 13:40 - 14:30 Session 3 - 1h
-- 14:30 - 15:00 Closing Retro
+- 08:45 - 09:00 Welcome
+- 09:00 - 09:15 Check-in
+- 09:15 - 09:45 Topics
+- 09:45 - 10:55 Session 1 - 1h
+- 10:55 - 11:05 Small Break
+- 11:30 - 12:40 Session 2 - 1h
+- 12:40 - 13:40 Lunch Break
+- 13:40 - 14:30 Session 3 - 1h
+- 14:30 - 15:00 Closing Retro
 
 ## Friendly Reminder
 
