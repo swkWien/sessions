@@ -4,7 +4,12 @@ Title: **Decoupled Design**
 
 ## Kata
 
-TODO
+Name:
+
+Description:
+
+Links:
+- ...
 
 ## 1. Session: Pen & Paper
 
@@ -54,7 +59,7 @@ Facilitator: ...
 
 **Description**
 
-## 4. Session: Inversion of Control (or rather Dependency Inversion? during the discussion we said IoC but isn't it DI that we aim for?)
+## 4. Session: Dependency Inversion / Dependency Injection?
 
 Goals:
 - ...
