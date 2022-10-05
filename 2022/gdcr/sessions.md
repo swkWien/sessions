@@ -62,7 +62,7 @@ Facilitator: ...
 
 **Description**
 
-## 4. Session: Dependency Inversion / Dependency Injection?
+## 4. Session: Dependency Inversion
 
 Goals:
 - ...
