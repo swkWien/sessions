@@ -2,6 +2,9 @@
 
 Title: **Decoupled Design**
 
+Target audience: Diverse, should be doable for beginners but provide enough
+challenge/room for experienced developers as well, e.g. through optional constraints
+
 ## Kata
 
 Name:
