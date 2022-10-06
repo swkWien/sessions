@@ -71,3 +71,7 @@ The ticket fee of 10€ will be refunded upon check in at the event.
 ### Host
 The retreat is hosted by Nagarro GmbH (https://www.nagarro.com).
 Arrival time is 08:30-09:00. We start at 09:00. You will receive an email with additional information in the run up to the event.
+
+## Eventbrite order mail
+
+Thank you for registering for the Global Day of Code Retreat. Upon your arrival, the organizer will take your registration and your registration fee of 10€ will be refunded. If you do not attend, we will keep the fee.
