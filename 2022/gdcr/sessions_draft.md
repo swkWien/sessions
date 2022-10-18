@@ -30,6 +30,7 @@ Rationale for using this kata:
 Claus:
 Beim Kata wichtig zu klären, welchen Branch wir nehmen.
 Wenn wir auch den Printer angreifen wollen, evtl. den mit entsprechenden Tests.
+Glaube aber nicht notwendig.
 
 Mögliche Requirement Changes
 * Introduce Discount Catalog (neu, einfach)
@@ -91,8 +92,7 @@ Also we introduce methods to highlight intent.
 Claus
 Man kann sich hier auf zwei unterschiedliche Aspekte fokussieren,
 alles vor/nach dem Teller.
-Vor dem Teller ist offensichtlicher finde ich weil der ReceiptPrinter
-etwas mühsam zu lesen ist.
+Vor dem Teller ist offensichtlicher, der ReceiptPrinter ist etwas schwerer zu lesen.
 
 TODO
 - Description
@@ -109,12 +109,10 @@ We have the following strategies that we can apply:
 - Inject dependencies
 - (and/or go a step further) invert dependencies
 
-We can do that easily for the teller with the catalog and discounts.
-
 Claus
 Zu den DIs gibt es Erklärung.
-Auch hier wieder die beiden oben genannten Optionen um den inhaltlichen
-Schwerpunkt zu setzen. Sollen wir das vorgeben?
+Die wichtige Frage ist mMn auf welchen fachlichen Teil wir uns fokussieren wollen.
+Vor oder nach dem Teller? Das hat evtl auch Auswirkungen auf die nächste Session.
 
 TODO
 - Description
@@ -125,15 +123,11 @@ TODO
 ## 5. Session: Introducing Ports and Adapters
 
 Claus
-Fällt mir schwer. Sollten wir den fachlichen Schwerpunkt tauschen?
-"Ports and Adapters" mit dem Input und "DIs" mit dem Output?
+Bin unschlüssig. Der offensichtliche IO Part hier wären die Datenbanken
+für catalog und discounts. Der Teil bietet sich auch für die vorherige
+Session sehr an. Wie siehst du das? Receipt Printer ist in der Form
+noch im Speicher.
 
-Using what we practiced already, we continue focusing
-on another part of the system.
-
-We try another strategy:
-- We introduce a receipt* port
-- We introduce adapters for different receipt representations
 
 https://github.com/swkBerlin/ports-and-adapters
 
@@ -151,6 +145,6 @@ TODO
 
 ## 5. Session: Alternativszenario
 
-Im Moment kommen wir für mich nicht richtig bei "Ports and Adapters" an. Wenn du keinen passenden Weg findest...
-Wenn man sich auf HTML Receipt fokussiert, ergibt sich dort ein neuer Zwischenschritt. Dann könnten wir quasi zwei Mal Session 4 machen
-aber mit einem anderen fachlichen Schwerpunkt.
+Wenn wir nicht bei "Ports and Adapters" ankommen, können wir zwei Mal etwas in der
+Art von Session 4 machen aber jeweils mit einem anderen fachlichen Schwerpunkt.
+Bin gerade zu müde um das klarer zu sehen. :)
