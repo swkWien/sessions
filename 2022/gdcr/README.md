@@ -30,7 +30,7 @@ test-driven development and focus on design aspects related to decoupling.
 
 If that sounds interesting to you, we are thrilled to have you join us!
 
-You find all details on our event page: https://swkwien.github.io/gdcr22/
+More details and registration via our event page: https://swkwien.github.io/gdcr22/
 
 
 Looking forward to seeing you there!
