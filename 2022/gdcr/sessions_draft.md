@@ -45,10 +45,6 @@ Meiner Meinung nach sollte die Design Änderung durch Änderungen in den
 Anforderungen motiviert sein, weil das für alle Beteiligten leicht
 nachzuvollziehen ist.
 
-Hier sehe ich folgende Möglichkeiten:
-- HTML Receipt (gibt schon, bietet sich an für "Introduce Layer")
-- Feature Bundles (gibt schon, würde ich außer Acht lassen)
-- Introduce Discount Catalog (könnte eine kleiner Änderung unsererseits sein)
 
 ## 1. Session: Sketching (Pen & Paper)
 
@@ -103,10 +99,8 @@ We do preparatory refactoring.
 Also, we ask ourselves "who is responsible for what?" and move code around to separate concerns.
 We may introduce methods to highlight intent.
 
-Claus:
-Hier könnten wir Discount Katalog einführen.
-Wir könnten die Verantwortlichkeiten zwischen Teller und ShoppingCart klären.
-Sollen wir zu Beginn die für später geplanten neuen Features präsentieren?
+We clarify responsibilities between Teller and ShoppingCart.
+And maybe other places as well.
 
 TODO
 - Description
@@ -121,9 +115,9 @@ Requirement change: "New Discount catalog" (mMn zu klein)
 Now that we have clarified which component is responsible for what,
 we are ready to decouple.
 
-Claus:
-Auf welchen fachlichen Part wollen wir die Aufmerksamkeit lenken?
-Anleitung mit Erklärungen zu DIs.
+We introduce a discount catalog to manage discounts through a DB.
+We introduce interfaces for catalog and discount catalog.
+We move these into separate module.
 
 TODO
 - Description
