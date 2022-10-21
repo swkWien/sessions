@@ -17,8 +17,9 @@ Possibly with slight modifications for our purposes (through fork).
 
 Rationale for using this kata:
 - It is a refactoring kata, hence there is starter code
+- We can safely evolve the system because we have tests
 - It is a system with input (catalogs for prices and discounts, involves IO),
-  little bit of in-between logic and output (receipt, does not involve IO)
+  little bit of convoluted in-between logic and output (receipt, does not involve IO)
 - Being able to retrieve data differently and being able to output a
   receipt to different formats is a natural requirement
 - We can motivate design changes through requirements changes
@@ -117,7 +118,7 @@ Claus:
 Diese Session passt so.
 
 
-## n. Session: Untangling the Knot
+## i. Session: Untangling the Knot
 
 Based on what we have seen in the previous session, we know we have
 work to do before we can add new features.
@@ -132,8 +133,8 @@ And maybe other places as well.
 Task description/questions
 
 * Reduce Coupling, improve Cohesion:
-* Put things that do the same thing together.
-* Separate things that are different into separate classes.
+  * Put things that do the same thing together.
+  * Separate things that are different into separate classes.
 
 Maybe as hint during the session if few people are doing it:
 
@@ -146,7 +147,7 @@ TODO
 - Facilitator
 
 
-## n. Session: Decoupling with SOLID (Dependency Injection and Inversion)
+## j. Session: Decoupling with SOLID (Dependency Injection and Inversion)
 
 What if we had a requirement change: discounted bundles. We are not ready for that.
 
@@ -175,7 +176,7 @@ TODO
 - Facilitator
 
 
-## Session: Introducing Layers
+## k. Session: Introducing Layers
 
 Requirement change: "New feature: HTML receipt"
 
@@ -194,7 +195,7 @@ The steps could look like:
 1. Introduce HTMLTemplate
 
 
-## Session: Introducing Layers/Modules (maybe even Ports and Adapters)
+## l. Session: Introducing Layers/Modules (maybe even Ports and Adapters)
 
 Peter: Ich sehe jetzt dass das Beispiel nicht ausreicht, weil es gibt keine Infrastruktur, so wie Roland auch schon gemeint hat. Printer und Teller sind nicht verbunden. Es gibt keinen Einstiegspunkt. Es ist auch zu viel Code um in allen Sprachen noch eine Main Klasse hinzuzufuegen. Seufz. Aber jetzt ist es zu spaet um noch umzulenken. Ich hab schon zu viel Zeit investiert. ;-)
 
