@@ -52,7 +52,7 @@ A coderetreat is all about crafting software. Join our community event to practi
 * **Where?** Nagarro GmbH (https://www.nagarro.at), Am Europlatz 2, 1120 Wien (Building: EURO PLAZA 4)
 
 * **Who can join?** Everyone interested in software development - beginners and experts alike
-* **How can I join?** Register here https://www.eventbrite.at/e/global-day-of-coderetreat-vienna-2021-tickets-189806314797
+* **How can I join?** Register here https://www.eventbrite.at/e/global-day-of-coderetreat-vienna-2022-tickets-433464663477
 
 
 This is an on-site event with a limited number of participants.
