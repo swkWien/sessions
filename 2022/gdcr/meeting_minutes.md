@@ -1,5 +1,41 @@
 # Meeting Minutes
 
+## 2022-10-24 Finalize Program
+
+### TBDs
+
+- [x] Eventbrite
+  - [x] Stand der Anmeldung https://github.com/swkWien/sessions/issues/92
+        Circa 20 Person
+  - [x] Mandatory PCR Test?! https://github.com/swkWien/sessions/issues/96
+        Verpflichtend!
+  - [x] Fragen wie Personen auf Event gestoßen sind?
+        Wie bist du auf Event gestoßen.
+- [x] Program
+  - [x] Claus macht allgemeine Moderation
+  - Weiter siehe unten.
+
+### TBD with respect to program
+
+Key questions:
+- Are you in? -> Yes
+- Who is doing which session? -> See below.
+- Do we want to create a fork? -> Yes
+
+The group agrees on...
+- Yes, we want "decoupled design" as overarching topic
+- Yes, we use SupermarketReceipt kata
+- While the sessions are progressive topic-wise,
+  each session starts from scratch
+
+Facilitators:
+1. Session: "Pen & Paper" by Peter
+2. Session: "Facing Reality" by Katrin & Patrick
+3. Session: "Untangling the Knot" by Adam
+4. Session: "SOLID" by Claus
+5. Session: "TBD" by Roland (mit Peter)
+
+
 ## 2022-09-16 Program Discussion
 
 ### Participants
