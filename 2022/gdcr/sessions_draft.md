@@ -47,7 +47,7 @@ Anforderungen motiviert sein, weil das für alle Beteiligten leicht
 nachzuvollziehen ist.
 
 
-## 1. Session: Sketching (Pen & Paper)
+## 1. Session: Sketching (Pen & Paper) - Peter
 
 We get familiar with the requirements.
 We introduce design as something to think about.
@@ -89,7 +89,7 @@ Claus:
 Diese Session passt so.
 
 
-## 2. Session: Facing Reality (Code Review, Refactoring, Pair Programming)
+## 2. Session: Facing Reality (Code Review, Refactoring, Pair Programming) - Katrin & Patrick
 
 We face reality.
 There is already code. It works, that's nice.
@@ -118,13 +118,14 @@ Claus:
 Diese Session passt so.
 
 
-## i. Session: Untangling the Knot
+## 3. Session: Untangling the Knot - Adam
 
 Based on what we have seen in the previous session, we know we have
 work to do before we can add new features.
 
 We do preparatory refactoring.
-Also, we ask ourselves "who is responsible for what?" and move code around to separate concerns.
+Also, we ask ourselves "who is responsible for what?" and move code around to
+separate concerns.
 We may introduce methods to highlight intent.
 
 We clarify responsibilities between Teller and ShoppingCart.
@@ -138,7 +139,8 @@ Task description/questions
 
 Maybe as hint during the session if few people are doing it:
 
-* Hint: We clarify responsibilities between Teller and ShoppingCart. And maybe other places as well.
+* Hint: We clarify responsibilities between Teller and ShoppingCart.
+        And maybe other places as well.
 * Hint: What about Law of Demeter violations in `ReceiptPrinter`?
 
 TODO
@@ -147,7 +149,13 @@ TODO
 - Facilitator
 
 
-## j. Session: Decoupling with SOLID (Dependency Injection and Inversion)
+## (last?). Session: Decoupling with SOLID (Dependency Injection and Inversion) - Claus
+
+Welcher Branch: wir nehmen einen und den
+Fork auf SWK Seite und da ist dann genau das drinnen, was wir was.
+Wir machen Fork? --> Link in Slides festhalten
+Wir machen "unsere" Version für den CR
+Es gibt genau einen Branch und eine vereinfachte README.
 
 What if we had a requirement change: discounted bundles. We are not ready for that.
 
@@ -175,8 +183,7 @@ TODO
 - Constraints
 - Facilitator
 
-
-## k. Session: Introducing Layers
+## ?. Session: Introducing Layers (skipped)
 
 Requirement change: "New feature: HTML receipt"
 
@@ -195,30 +202,41 @@ The steps could look like:
 1. Introduce HTMLTemplate
 
 
-## l. Session: Introducing Layers/Modules (maybe even Ports and Adapters)
+## l. Session: Introducing Layers/Modules (maybe even Ports and Adapters) - Roland
 
-Peter: Ich sehe jetzt dass das Beispiel nicht ausreicht, weil es gibt keine Infrastruktur, so wie Roland auch schon gemeint hat. Printer und Teller sind nicht verbunden. Es gibt keinen Einstiegspunkt. Es ist auch zu viel Code um in allen Sprachen noch eine Main Klasse hinzuzufuegen. Seufz. Aber jetzt ist es zu spaet um noch umzulenken. Ich hab schon zu viel Zeit investiert. ;-)
+Peter: Ich sehe jetzt dass das Beispiel nicht ausreicht, weil es gibt keine
+Infrastruktur, so wie Roland auch schon gemeint hat. Printer und Teller sind
+nicht verbunden. Es gibt keinen Einstiegspunkt. Es ist auch zu viel Code um in
+allen Sprachen noch eine Main Klasse hinzuzufuegen. Seufz. Aber jetzt ist es zu
+spaet um noch umzulenken. Ich hab schon zu viel Zeit investiert. ;-)
 
-Are we done we decoupling? What else could we do? We have separated classes. What about domains?
+Are we done we decoupling? What else could we do? We have separated classes.
+What about domains?
 
 Task description/questions
 
 * Create modules (packages, folder, depending on language) for infrastructure: formatting
-* Make sure you have a layered infrastructure. The `ReceiptPrinter` concept is part of Sales, but the implementation to plain text is part of (command line) infrastructure.
-* (maybe to end here) Now We want a new HTML printer and at the same time try to avoid duplication.
+* Make sure you have a layered infrastructure. The `ReceiptPrinter` concept is
+  part of Sales, but the implementation to plain text is part of (command line) infrastructure.
+* (maybe to end here) Now We want a new HTML printer and at the same time try to
+  avoid duplication.
 * Create modules (packages, folder, depending on language) for each different domain
-concept (aka bounded context): Stock (Catalog and Products), Sales.
+  concept (aka bounded context): Stock (Catalog and Products), Sales.
 
 Maybe as addition  during the session if people are struggling:
 
-* What is the functionality we use of the Catalog? We are only interested in prices. Let's have our own interface `ProductPrices` which simplifies the usage, maybe this is a reduced version of `Catalog`. (This is a driven port.)
-* Create the adapter which implements `ProductPrices` and delegates to `Catalog`. (This is the adapter.)
+* What is the functionality we use of the Catalog? We are only interested in prices.
+  Let's have our own interface `ProductPrices` which simplifies the usage, maybe this
+  is a reduced version of `Catalog`. (This is a driven port.)
+* Create the adapter which implements `ProductPrices` and delegates to `Catalog`.
+  (This is the adapter.)
 
 Rules to validate against (maybe Retro questions):
 
 * The application itself does not depend directly on any external systems, but only on ports.
 * The protocol for a port is given by the purpose of the conversation it describes.
-* For each external system there is an "adapter" that converts the API definition to the format needed by that system and vice versa.
+* For each external system there is an "adapter" that converts the API definition to
+  the format needed by that system and vice versa.
 
 TODO
 - Description
