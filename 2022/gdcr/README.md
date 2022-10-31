@@ -104,3 +104,16 @@ Thank you for registering for the Global Day of Code Retreat. Upon your arrival,
 * How did you find out about us?
 * Do you join for breakfast?
 * Do you join for dinner?
+
+## Tweets
+
+### Announcement for pinning
+
+Join our local community event for the Global Day of Coderetreat! 🎉
+🤝 Collective learning
+🤓 Software crafting
+🧩 Decoupled design
+
+Sign up here https://www.eventbrite.com/e/global-day-of-coderetreat-vienna-2022-tickets-433464663477
+
+### TODO: please add more ideas below
