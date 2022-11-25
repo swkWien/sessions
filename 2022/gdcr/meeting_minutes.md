@@ -1,5 +1,184 @@
 # Meeting Minutes
 
+## 2022-11-15 Orga Retro
+
+Themen:
+- Wie war es für dich?
+- Was nimmst du mit?
+- Lessons learned?
+- Feedback bei Interesse
+
+### Participants
+- Adam
+- Claus
+- Patrick
+- Rea
+
+### Notes
+
+#### Check In / Gedanken
+
+- Adam:
+  - Eine Woche her, sehr genossen
+  - Schade dass nicht noch mehr eigene Koll gekommen sind
+  - Ergebnis sensationell, extrem flüssig, Abstimmung der Sessions; bissl THeorie, wer mag kann weiter aber jedenfalls Orientierung, Respekt.
+- Patrick
+  - Sehr gut organisiert
+  - Frage war "wird das gehen bei Sessions mitmachen?" -> "Ja!"
+  - Pairing war wieder cool und war sehr flüssig (trotz) unterschiedlicher Code Bases
+  - Generell sehr kurzweilig bis auf gesundheitlich angeschlagen
+  - Extrem fein und auch interessant Backstage zu sehen
+- Rea:
+  - Schad, dass nicht dabei
+  - wirkt als hätte sich Vorbereitung ausgezahlt
+- Claus: siehe unten
+
+Aus zweiter Hand:
+- Roland: Toll, kann man als Training übernehmen
+- Peter: Ergebnis spektakulär
+
+
+#### Questions for new facilitators
+
+Question for new facilitators (Patrick, Kathrin)
+* how did you feel doing it
+* did you feel supported?
+* how could support by group be better/stringer
+* etc
+
+Patrick:
+- Persönlich etwas schwierig empfunden
+- Roland in der Firma geschrieben, wer kann unterstützen;
+  Patrick gefragt "was brauchst du / was gibt's" aber kein Infos erhalten
+- Dann gleich in Orga Gruppe
+  - Später dazu gekommen
+  - Dann nicht zurecht gefunden
+  - Keine Bezugsperson
+- Info aufgeteilt über Issues und wenig Überblick
+- Patrick hat sich reingeworfen gefühlt
+- Hilfe/Begleitung durch Claus sehr wertvoll, vielen Dank, das war wichtig
+
+#### Claus' Notizen
+
+- Schöne Rückmeldungen der Teilnehmenden
+- Sehr schön, was wir auf die Beine gestellt haben
+  - Übergeordnetes Thema cool
+  - Design Schwerpunkt schöner Kontrast zum letzten Jahr und spannend
+- Hat mich gefreut, dass uns Visualisierung gelungen ist
+  - Wäre interessant, das stärker in die Moderation einzubauen
+- Zusammenarbeit als zäh erlebt, Kommunikation nicht flüssig, in Summe anstrengend für mich
+  - Vorab stärker auf Erwartungshaltungen, Rollen, Resourcen eingehen?
+  - Wer will was von dem Event?
+  - Wer kann was/wieviel beisteuern?
+  - Mehr delegieren?
+- Programmgestaltungsprozess
+  - Gefühlter Bruch zwischen initialer Dikussion und den
+    ersten Versuchen das Thema zu konkretisieren
+  - Hätte es schön gefunden, wenn sich mehr in die Detailausarbeitung involviert
+    hätten - war vereinzelt
+  - Würde ein physisches Treffen Sinn machen?
+- Keine einzige Frau als Teilnehmerin --> fail
+  - Ursachenforschung
+  - Ziel für's nächste Mal?
+- Zu wenig Outreach?
+  - Was war bei "alten" Retreats anders, dass mehr Leute gekommen sind?
+- Umgang PCR Test wieder unklar, bitte nicht mehr so
+- Glocke zum Beenden der Sessions wäre nett
+- Zeitplan präsenter kommunizieren
+- Co-Facilitation bereits im Zeitplan verankern
+  - Es braucht mMn mehr als eine Person
+  - Ich war viel unterwegs (gerne) und es hat den Leuten geholfen
+- Zukunft softwerkskammer.org
+  - Relativiert, geht wieder
+- Mailings, würde mir mehr Kommunikation wünschen
+  - Finde es gut, wenn es ein Vorabmail mit wichtigen Links (slides) gibt
+  - Finde es gut, wenn es ein Abschlussmail mit wichtigen Links (Feedback) gibt
+- Zwischenfragen ein schönes Moderationswerkzeug. Mehr davon?
+- Kein Salat? :D
+
+
+#### Feedback Form
+
+8 responses; all respondents recomment the event.
+
+**Why did you join?**
+
+- Enthusiasm for programming
+- To learn
+- Meet people, learn on current state of development practices
+- eager to try out something new and to learn from fellow software engineers - it was my first coding retreat
+- Sounded like a great opportunity to learn something new, although I was hesitant to spend another day of the work week in front of a computer..
+- I enjoy the learning experience during coding dojos and code retreats in Vienna.
+- I was hosting it
+
+**What did you like about the event?**
+
+- Pair programming sessions with different people
+- The different partners that one can learn from
+- Overall organization
+- great atmosphere, good inputs from all five speakers - even with a thematic arch, interesting to work with different like-minded people, challenging (in a good way) to make the most out of the 30 minute sessions
+- Very relaxed, everybody was suuuper friendly and wholesome.
+- Very smooth event, well organized, proficient introductory talks to each session, great community.
+- the huge number of participants the diversity of the participants the topic and agenda of the whole day
+
+**What did you dislike or what could have been better?**
+
+- Pointers to the location. Being the first time to Nagarro, I wasn't sure which of these glass buildings to approach and how to enter. The A4 paper for GDCR is rather small when looking for something like this from a distance.
+- for me personally I would have wished to get more refactoring done.. in the first session I didn't even touch a line of code. Maybe the code base was a bit too large / complex
+- During the pair programming session I would have liked an extra 5min for small talk and get to know my partner. I mean we did this, but then we were lacking this time at the end for the assignments.
+
+**Everything else you want to say:**
+
+- Thank you all, again, for this. I said it a few times - it is great to be able to see these events coming along :)
+- thanks a lot for a today!
+- In the beginning of one session we separated into two groups - the ones that knew the concept well and the others. The pairs were generated by one of each group. This I liked a lot as I felt the most enjoyable sessions were the ones where one person really knew what to do (ok easy for me to say as I was always the one who didn't know..). Might be a selfish thing to say, but this was my impression.
+
+#### Learnings
+
+Allgemeine Gedanken
+* Mehr Zeit ist eine Illusion :-)
+* Mehr Tasks an Leute aufteilen.
+* TBD: Warum keine Frauen? Ursachenforschung.
+
+**Learning: Point of Contact / Übersicht definieren / Onboarding**
+
+Expliziter kümmern um:
+* Rollen
+* TODOs
+* Erwartungen
+* Big Picture zum Prozess
+
+TBD:
+* Zu viele Repos?
+* Thread gesucht?
+* Wie bekommt man Übersicht?
+
+**Learning: Programmgestaltung und Prozess**
+
+Vorschlag zur Gestaltung des Prozesses
+1. Initiale Diskussion zur Ideenfindung
+1. Ausarbeitung konkreter Vorschlag in Kleinstgruppe
+   - Kleinsgruppe nur die Leute die Resourcen haben/können/wollen
+   - Konkreter Vorschlag erleichtert es anderen sich einzubringen
+1. Gemeinsamer Review Prozess
+
+*Wenn du nicht mehr weiter weißt, bilde einen Arbeitskreis*
+
+TBD:
+* Können wir was anders machen?
+* Wie man Workload besser aufteilen kann?
+
+**Learning: Webseite für Moderation**
+
+Grundsätzlich gut.
+
+Patrick und Kathrin haben gekämpft.
+
+Adam könnte in Zukunft Webseite unterstützen.
+Perfectly happy with setup.
+Nice to have on-the-fly rendering.
+
+
 ## 2022-10-24 Finalize Program
 
 ### TBDs
