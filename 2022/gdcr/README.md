@@ -116,4 +116,20 @@ Join our local community event for the Global Day of Coderetreat! 🎉
 
 Sign up here https://www.eventbrite.com/e/global-day-of-coderetreat-vienna-2022-tickets-433464663477
 
+
+## Final email
+Dear participant.
+
+We are happy, that this event was so much fun and such a success. This is also your success. A special thanks to you, who spend a whole day on practicing your coding skills in our office at Nagarro on Saturday. A big thank to the great facilitators Katrin Heiderer, Peter Kofler, Patrick Scheibert, Adam Zielinski, Claus Aichinger, Roland Germ. If you like to review the GDCR 2022 sessions, the slides are publicly available and hosted by the Softwerkskammer Wien.
+
+We want to continuously improve our events. Please, can you share your feedback with us. 
+
+After the GDCR 2022 is before your next Code Retreat. Join our next practice and learning event at 29th Nov 2022 (register here at the Software Craftsmanship community Vienna. The communities conduct coding dojos and code retreats frequently, and they are organizing conferences like the SoCraTes unconferences (Software Craftsmanship and Testing). Looking forward to meeting you again at another code retreat or a coding dojo in the community!
+
+Finally, if we have aroused your interest in Nagarro, please visit our website. We are looking for new colleagues and have a lot of open positions.
+
+Best regards,
+Roland
+
+
 ### TODO: please add more ideas below
