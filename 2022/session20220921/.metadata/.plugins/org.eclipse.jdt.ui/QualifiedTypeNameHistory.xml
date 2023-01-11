@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.tngtech.archunit.core.domain.JavaClasses"/>
+    <fullyQualifiedTypeName name="com.tngtech.archunit.core.importer.ClassFileImporter"/>
+    <fullyQualifiedTypeName name="com.tngtech.archunit.lang.ArchRule"/>
+    <fullyQualifiedTypeName name="com.tngtech.archunit.junit.ArchUnitRunner"/>
+    <fullyQualifiedTypeName name="org.junit.runner.RunWith"/>
+    <fullyQualifiedTypeName name="com.tngtech.archunit.junit.AnalyzeClasses"/>
+    <fullyQualifiedTypeName name="com.tngtech.archunit.junit.ArchTest"/>
+</qualifiedTypeNameHistroy>

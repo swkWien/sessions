@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Session 20220921</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="reveal.js/css/reveal.min.css">
+    <link rel="stylesheet" href="reveal.js/css/theme/sky.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <h1>Coding Dojo Vienna</h1>
+          <br />
+          <img style="border:0;width:20%;" src="images/swkLogo.png" />
+          <h5>Softwerkskammer Wien</h5>
+          <br />
+          <p>
+            Twitter: @swkWien &nbsp;&nbsp;/&nbsp;&nbsp; #CodingDojoVie
+          </p>
+        </section>
+
+        <section>
+          <section>
+            <h1>Round 1</h1>
+ 	        <h2>The Exercise</h2>
+            <h3>ArchUnit in Three Easy Steps</h3>
+				<center>
+				<table>
+					<tr><td>Chose any app (examples to follow)</td></tr>
+					<tr><td>Add ArchUnit</td></tr>
+					<tr><td>Have fun</td></tr>
+				</table>
+				</center>
+          </section>
+
+		 <section>
+            <h2>What even is ArchUnit?</h2>
+				<center>
+				<p><a href="https://www.archunit.org/">https://www.archunit.org/</a></p>
+				<table>
+					<tr><td>like unit tests, but for architecture</td></tr>
+					<tr><td>ArchUnit is a free, simple and extensible library for checking the architecture of your Java code using any plain Java unit test framework.</td></tr>
+					<tr><td>check dependencies between packages and classes, layers and slices, check for cyclic dependencies and more</td></tr>
+				</table>
+				</center>
+          </section>
+
+          <section>
+            <h3>Demo App suggestions:</h3>
+            <center>
+            <table>
+            <tr><td><a href="https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition">FizzBuzz Enterprise Edition</a></td></tr>
+            <tr><td><a href="https://github.com/hexagonframework/hexagonal-architecture-demo">Hexagonal Architecture Demo</a></td></tr>
+            <tr><td><a href="https://gitlab.com/bulat.giniiatullin/spring-demo-app">Spring Demo App</a></td></tr>
+            <tr><td><a href="https://github.com/android10/Android-CleanArchitecture">Clean Architecture Demo: Android App</a></td></tr>
+            <tr><td><a href=""></a></td></tr>
+            <tr><td><a href=""></a></td></tr>
+            </table>
+            </center>
+			</section>
+			
+         <section>
+            <h3>Actual Apps suggestions:</h3>
+            <center>
+            <table>
+            <tr><td><a href="https://github.com/alibaba/fastjson">FastJson</a></td></tr>
+            <tr><td><a href="https://github.com/jenkinsci/jenkins">Jenkins</a></td></tr>
+            <tr><td><a href="">Hexagonal Architecture Demo</a></td></tr>
+            <tr><td><a href="https://gitlab.com/bulat.giniiatullin/spring-demo-app">Spring Demo App</a></td></tr>
+            <tr><td><a href=""></a></td></tr>
+            <tr><td><a href=""></a></td></tr>
+            <tr><td><a href=""></a></td></tr>
+            </table>
+            </center>
+			</section>
+			
+			<section>
+			   <h3>Get ArchUnit </h3>
+			   <p>&lt;dependency&gt;
+    &lt;groupId&gt;com.tngtech.archunit&lt;/groupId&gt;
+    &lt;artifactId&gt;archunit&lt;/artifactId&gt;
+    &lt;version&gt;1.0.0-rc1&lt;/version&gt;
+    &lt;scope&gt;test&lt;/scope&gt;
+</dependency>
+</p>
+			</section>
+
+          <section>
+            <h3>Retrospective</h3>
+            <center>
+				<table>
+					<tr><td>Did you succeed?</td></tr>
+					<tr><td>How did it feel?</td></tr>
+					<tr><td>What was the most difficult part?</td></tr>
+				</table>
+			</center>
+          </section>
+        </section>
+        
+        <section>
+          <section>
+            <h1>Round 2</h1>
+ 	        <h3>Start over</h3>
+ 	        <p>or</p>
+ 	        <h3>Continue</h3>
+ 	        <p>or</p>
+ 	        <h3>???</h3>
+          </section>
+
+          <section>
+            <h3>Retrospective</h3>
+          </section>
+        </section>
+
+        <section>
+          <h2>Thank you for joining!</h2>
+          <p>Follow #CodingDojoVie or @swkWien</p>
+        </section>
+      </div>
+
+    </div>
+
+    <script src="reveal.js/lib/js/head.min.js"></script>
+    <script src="reveal.js/js/reveal.min.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+
+      // setInterval(function() { Reveal.next(); }, 15000);
+
+    </script>
+
+  </body>
+</html>
