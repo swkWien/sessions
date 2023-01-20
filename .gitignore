@@ -4,3 +4,4 @@
 # Code related
 node_modules
 .DS_Store
+.metadata

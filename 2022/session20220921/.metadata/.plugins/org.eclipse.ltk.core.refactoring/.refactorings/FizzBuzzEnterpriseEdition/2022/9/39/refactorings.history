@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename type &apos;ArchTest&apos; to &apos;FizzBuzzArchTest&apos;&#x0A;- Original project: &apos;FizzBuzzEnterpriseEdition&apos;&#x0A;- Original element: &apos;ArchTest&apos;&#x0A;- Renamed element: &apos;FizzBuzzArchTest&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ArchTest&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/test\/java=/test=/true=/=/optional=/true=/=/maven.pomderived=/true=/&lt;{ArchTest.java[ArchTest" matchStrategy="1" name="FizzBuzzArchTest" qualified="false" references="true" similarDeclarations="false" stamp="1663769391131" textual="false" version="1.0"/>
-</session>
