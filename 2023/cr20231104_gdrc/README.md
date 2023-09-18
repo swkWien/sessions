@@ -76,12 +76,13 @@ We invite everyone interested in software development, beginners and seniors ali
 Arrival from 08:15 onwards. Join us for breakfast, if you like. We provide beverages and some snacks. The sessions start at 09:00.
 
 ### What is a Code Retreat?
-A Coderetreat is a day-long, intensive practice event, focusing on the fundamentals of software development and design. By providing developers the opportunity to take part in focused practice, away from the pressures of 'getting things done', the Coderetreat format has proven itself to be a highly effective means of skill improvement. Practising the basic principles of modular and object-oriented design, developers can improve their ability to write code that minimizes the cost of change over time.
+A Coderetreat is a day-long, intensive practice event, focusing on the fundamentals of software development and design. By providing developers the opportunity to take part in focused practice, away from the pressures of 'getting things done', the Coderetreat format has proven to be highly effective for skill improvement. Practising the basic principles of modular and object-oriented design, developers can improve their ability to write code that minimizes the cost of change over time.
 More info: https://www.coderetreat.org/.
 
 ### Prerequisites
-You need your computer prepared with a working and testing environment ("IDE") installed for (all) your preferred language(s). The event itself is language-agnostic. We have had participants from Java, .Net, Ruby, Scala, Haskell, Go, JavaScript, Python and many other communities. The Coderetreat is open to everybody and is suitable for junior and senior developers alike with other roles involved in the software development process, like team leads or scrum masters equally welcome.
-Code of Conduct
+You need your computer prepared with a working and testing environment ("IDE") installed for (all) your preferred language(s). The event itself is language-agnostic. We have had participants from Java, .Net, Ruby, Scala, Haskell, Go, JavaScript, Python and many other communities. The Coderetreat is open to everybody and is suitable for junior and senior developers alike, with other roles involved in the software development process - like team leads or scrum masters - equally welcome.
+
+### Code of Conduct
 We strive to provide a welcoming and safe practice and learning environment for everyone. If you experience or witness unacceptable behaviour during the event - or have any other concerns - please talk to one of the facilitators or hosts.
 More info: https://makers.tech/code-of-conduct/.
 
@@ -90,7 +91,7 @@ The ticket fee of 10€ will be refunded upon check in at the event.
 
 ### Host
 The retreat is hosted by Nagarro GmbH (https://www.nagarro.com).
-Arrival time is 08:30-09:00. We start at 09:00. You will receive an email with additional information in the run up to the event.
+Arrival time is 08:15-09:00. Sessions start at 09:00. You will receive an email with additional information in the run up to the event.
 
 ## Eventbrite order mail
 
