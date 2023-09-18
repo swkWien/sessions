@@ -129,5 +129,6 @@ Finally, if we have aroused your interest in Nagarro, please visit our website. 
 Best regards,
 Roland
 
+## Register event at www.coderetreat.org
 
 ### TODO: please add more ideas below
