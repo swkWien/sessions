@@ -98,11 +98,11 @@ Arrival time is 08:15-09:00. Sessions start at 09:00. You will receive an email 
 Thank you for registering for the Global Day of Code Retreat. Upon your arrival, the organizer will take your registration and your registration fee of 10€ will be refunded. If you do not attend, we will keep the fee.
 
 ## Eventbrite questions
-* Have you participated in a coding dojo or code retreat before?
+* Have you participated in a Coding Dojo or Coderetreat before?
 * Which programming languages are you familiar with?
 * How did you find out about us?
-* Will you join for breakfast?
-* Will you join for dinner?
+* Will you join us for breakfast?
+* Will you join us for dinner?
 
 ## Tweets
 
