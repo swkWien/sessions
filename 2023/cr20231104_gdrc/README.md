@@ -7,8 +7,8 @@ Links:
 
 ## Important Facts
 
-- Landing page: 
-- Registration: https://www.eventbrite.at/e/global-day-of-coderetreat-vienna-2022-tickets-433464663477
+- Landing page: https://swkwien.github.io/gdcr23/
+- Registration: https://www.eventbrite.com/e/global-day-of-coderetreat-vienna-2023-tickets-719761033627
 - Date: 2023-11-04 09:00-17:00 (08:15 if you join breakfast)
 - Location: Nagarro GmbH (https://www.nagarro.at), Am Europlatz 2, 1120 Wien (Building: EURO PLAZA 4)
 - Topic: ???
@@ -30,7 +30,7 @@ test-driven development and focus on design aspects related to decoupling.
 
 If that sounds interesting to you, we are thrilled to have you join us!
 
-More details and registration via our event page: ???
+More details and registration via our event page: https://swkwien.github.io/gdcr23/
 
 
 Looking forward to seeing you there!
@@ -43,16 +43,16 @@ Cheers,
 
 Dear all,
 
-The global day of coderetreat is approaching and I want to invite you to this year’s local event: https://swkwien.github.io/gdcr22/.
+The global day of coderetreat is approaching and I want to invite you to this year’s local event: https://swkwien.github.io/gdcr23/.
 
 A coderetreat is all about crafting software. Join our community event to practice professional software development, spend a day on deliberate learning and practice (and having fun;).
 
 * **What?** This time we focus on ***decoupled design***
-* **When?** Saturday, 2022-11-05 09:00 - 17:00 (earlier if you want to join for breakfast)
+* **When?** Saturday, 2023-11-04 09:00 - 17:00 (earlier if you want to join for breakfast)
 * **Where?** Nagarro GmbH (https://www.nagarro.at), Am Europlatz 2, 1120 Wien (Building: EURO PLAZA 4)
 
 * **Who can join?** Everyone interested in software development - beginners and experts alike
-* **How can I join?** Register here https://www.eventbrite.at/e/global-day-of-coderetreat-vienna-2022-tickets-433464663477
+* **How can I join?** Register here https://www.eventbrite.com/e/global-day-of-coderetreat-vienna-2023-tickets-719761033627
 
 
 This is an on-site event with a limited number of participants.
@@ -72,7 +72,7 @@ A coderetreat is all about crafting software. Join our community event to practi
 
 Here is everything you need to know:
 * **What?** This time we focus on ***decoupled design***
-* **When?** November 5th 2022 09:00 - 17:00 (earlier if you want to join for breakfast)
+* **When?** November 4th 2023 09:00 - 17:00 (earlier if you want to join for breakfast)
 * **Where?** Nagarro GmbH (https://www.nagarro.at), Am Europlatz 2, 1120 Wien (Building: EURO PLAZA 4)
 
 * **Who can join?** Everyone interested in software development
@@ -114,7 +114,7 @@ Join our local community event for the Global Day of Coderetreat! 🎉
 🤓 Software crafting
 🧩 Decoupled design
 
-Sign up here https://www.eventbrite.com/e/global-day-of-coderetreat-vienna-2022-tickets-433464663477
+Sign up here https://www.eventbrite.com/e/global-day-of-coderetreat-vienna-2023-tickets-719761033627
 
 
 ## Final email
@@ -122,7 +122,7 @@ Dear participant.
 
 We are happy, that this event was so much fun and such a success. This is also your success. A special thanks to you, who spend a whole day on practicing your coding skills in our office at Nagarro on Saturday. A big thank to the great facilitators Katrin Heiderer, Peter Kofler, Patrick Scheibert, Adam Zielinski, Claus Aichinger, Roland Germ. If you like to review the GDCR 2022 sessions, the slides are publicly available and hosted by the Softwerkskammer Wien.
 
-We want to continuously improve our events. Please, can you share your feedback with us. 
+We want to continuously improve our events. Please, can you share your feedback with us.
 
 After the GDCR 2022 is before your next Code Retreat. Join our next practice and learning event at 29th Nov 2022 (register here at the Software Craftsmanship community Vienna. The communities conduct coding dojos and code retreats frequently, and they are organizing conferences like the SoCraTes unconferences (Software Craftsmanship and Testing). Looking forward to meeting you again at another code retreat or a coding dojo in the community!
 
