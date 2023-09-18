@@ -48,7 +48,7 @@ The global day of coderetreat is approaching and I want to invite you to this ye
 A coderetreat is all about crafting software. Join our community event to practice professional software development, spend a day on deliberate learning and practice (and having fun;).
 
 * **What?** This time we focus on ***decoupled design***
-* **When?** Saturday, 2023-11-04 09:00 - 17:00 (earlier if you want to join for breakfast)
+* **When?** Saturday, 2023-11-04 09:00 - 17:00 (08:15 if you want to join for breakfast)
 * **Where?** Nagarro GmbH (https://www.nagarro.at), Am Europlatz 2, 1120 Wien (Building: EURO PLAZA 4)
 
 * **Who can join?** Everyone interested in software development - beginners and experts alike
@@ -66,16 +66,14 @@ Looking forward to seeing you there!
 Cheers,
 \<NAME\>
 
+## Eventbrite summary
+A day of deliberate practice and learning.
+
 ## Eventbrite content
 
-A coderetreat is all about crafting software. Join our community event to practice professional software development, spend a day on deliberate learning and practice (and having fun).
-
-Here is everything you need to know:
-* **What?** This time we focus on ***decoupled design***
-* **When?** November 4th 2023 09:00 - 17:00 (earlier if you want to join for breakfast)
-* **Where?** Nagarro GmbH (https://www.nagarro.at), Am Europlatz 2, 1120 Wien (Building: EURO PLAZA 4)
-
-* **Who can join?** Everyone interested in software development
+A Coderetreat is all about crafting software. Join our community event to practise professional software development, spend a day on deliberate learning and practice (and having fun).
+We invite everyone interested in software development, beginners and seniors alike, to participate in this year's global day of coderetreat.
+Arrival from 08:15 onwards. Join us for breakfast, if you like. We provide beverages and some snacks. The sessions start at 09:00.
 
 ### What is a Code Retreat?
 A Coderetreat is a day-long, intensive practice event, focusing on the fundamentals of software development and design. By providing developers the opportunity to take part in focused practice, away from the pressures of 'getting things done', the Coderetreat format has proven itself to be a highly effective means of skill improvement. Practising the basic principles of modular and object-oriented design, developers can improve their ability to write code that minimizes the cost of change over time.
@@ -114,7 +112,7 @@ Join our local community event for the Global Day of Coderetreat! 🎉
 🤓 Software crafting
 🧩 Decoupled design
 
-Sign up here https://www.eventbrite.com/e/global-day-of-coderetreat-vienna-2023-tickets-719761033627
+Sign up here http://go.nagarro.com/gdcr23-vienna
 
 
 ## Final email
@@ -124,7 +122,7 @@ We are happy, that this event was so much fun and such a success. This is also y
 
 We want to continuously improve our events. Please, can you share your feedback with us.
 
-After the GDCR 2022 is before your next Code Retreat. Join our next practice and learning event at 29th Nov 2022 (register here at the Software Craftsmanship community Vienna. The communities conduct coding dojos and code retreats frequently, and they are organizing conferences like the SoCraTes unconferences (Software Craftsmanship and Testing). Looking forward to meeting you again at another code retreat or a coding dojo in the community!
+After the GDCR 2023 is before your next Code Retreat. Join our next practice and learning event at 29th Nov 2022 (register here at the Software Craftsmanship community Vienna. The communities conduct coding dojos and code retreats frequently, and they are organizing conferences like the SoCraTes unconferences (Software Craftsmanship and Testing). Looking forward to meeting you again at another code retreat or a coding dojo in the community!
 
 Finally, if we have aroused your interest in Nagarro, please visit our website. We are looking for new colleagues and have a lot of open positions.
 
