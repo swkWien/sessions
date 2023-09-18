@@ -1,0 +1,26 @@
+{
+  "title": "Global Day of Coderetreat Vienna 2023",
+  "description": "A day of deliberate practice and learning",
+  "format": "classic",
+  "spoken_language": "Englisch",
+  "url": "go.nagarro.com/gdcr23-vienna",
+  "code_of_conduct": "https://makers.tech/code-of-conduct/",
+  "date": {
+    "start": "2023-11-04T08:15:00+01:00",
+    "end": "2023-11-04T17:00:00+01:00"
+  },
+  "sponsors": [
+    {
+      "name": "Nagarro",
+      "url": "https://www.nagarro.com"
+    }
+  ],
+  "location": {
+    "city": "Vienna",
+    "country": "Austria",
+    "coordinates": {
+      "latitude": 48.2083537,
+      "longitude": 16.3725042
+    }
+  }
+}
