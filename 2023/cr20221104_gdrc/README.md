@@ -9,7 +9,7 @@ Links:
 
 - Landing page: 
 - Registration: https://www.eventbrite.at/e/global-day-of-coderetreat-vienna-2022-tickets-433464663477
-- Date: 2022-11-05 09:00-17:00 (early if you join breakfast)
+- Date: 2023-11-04 09:00-17:00 (08:15 if you join breakfast)
 - Location: Nagarro GmbH (https://www.nagarro.at), Am Europlatz 2, 1120 Wien (Building: EURO PLAZA 4)
 - Topic: ???
 - Tagline: A day of deliberate practice and learning
