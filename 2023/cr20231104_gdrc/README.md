@@ -26,7 +26,7 @@ The Vienna software crafting community (https://swkwien.github.io/) invites you 
 in our local event for the Global Day of Coderetreat (https://www.coderetreat.org/).
 
 On this day, we come together to learn from each other, practice pair programming &
-test-driven development and focus on design aspects related to decoupling.
+test-driven development and focus on design aspects related to <!!NEW TOPIC!!>.
 
 If that sounds interesting to you, we are thrilled to have you join us!
 
@@ -47,7 +47,7 @@ The global day of coderetreat is approaching and I want to invite you to this ye
 
 A coderetreat is all about crafting software. Join our community event to practice professional software development, spend a day on deliberate learning and practice (and having fun;).
 
-* **What?** This time we focus on ***decoupled design***
+* **What?** This time we focus on *<!!NEW TOPIC!!>*
 * **When?** Saturday, 2023-11-04 09:00 - 17:00 (08:15 if you want to join for breakfast)
 * **Where?** Nagarro GmbH (https://www.nagarro.at), Am Europlatz 2, 1120 Wien (Building: EURO PLAZA 4)
 
@@ -110,7 +110,7 @@ Thank you for registering for the Global Day of Code Retreat. Upon your arrival,
 Join our local community event for the Global Day of Coderetreat! 🎉
 🤝 Collective learning
 🤓 Software crafting
-🧩 Decoupled design
+🧩 <!!NEW TOPIC!!>
 
 Sign up here http://go.nagarro.com/gdcr23-vienna
 
