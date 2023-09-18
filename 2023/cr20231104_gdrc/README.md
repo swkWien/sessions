@@ -100,8 +100,8 @@ Thank you for registering for the Global Day of Code Retreat. Upon your arrival,
 * Have you participated in a coding dojo or code retreat before?
 * Which programming languages are you familiar with?
 * How did you find out about us?
-* Do you join for breakfast?
-* Do you join for dinner?
+* Will you join for breakfast?
+* Will you join for dinner?
 
 ## Tweets
 
