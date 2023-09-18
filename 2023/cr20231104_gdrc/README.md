@@ -135,3 +135,5 @@ Roland
 Update ./https://github.com/swkWien/sessions/blob/master/2023/cr20231104_gdrc/austria-vienna-2023-11-04-global-day-of-coderetreat-vienna-2023.json and folow the instructionns from https://www.coderetreat.org/facilitators/register/
 
 ### TODO: please add more ideas below
+
+* Announce Event in Software Crafters' Slack
