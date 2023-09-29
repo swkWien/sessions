@@ -66,14 +66,21 @@ Looking forward to seeing you there!
 Cheers,
 \<NAME\>
 
-## Eventbrite summary
-A day of deliberate practice and learning.
+## Eventbrite
 
-## Eventbrite content
+### Summary
+Welcome to a day of deliberate practice and learning!
 
-A Coderetreat is all about crafting software. Join our community event to practise professional software development, spend a day on deliberate learning and practice (and having fun).
+### Description
+
+A **Coderetreat** is all about crafting software. Join our community event to practise professional software development, spend a day on deliberate learning and practice (and having fun).
+
+This year will focus on different TDD styles (test-first development).
+
 We invite everyone interested in software development, beginners and seniors alike, to participate in this year's global day of coderetreat.
 Arrival from 08:15 onwards. Join us for breakfast, if you like. We provide beverages and some snacks. The sessions start at 09:00.
+
+**Looking forward to seeing you soon!**
 
 ### What is a Code Retreat?
 A Coderetreat is a day-long, intensive practice event, focusing on the fundamentals of software development and design. By providing developers the opportunity to take part in focused practice, away from the pressures of 'getting things done', the Coderetreat format has proven to be highly effective for skill improvement. Practising the basic principles of modular and object-oriented design, developers can improve their ability to write code that minimizes the cost of change over time.
