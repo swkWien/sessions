@@ -11,7 +11,7 @@ Links:
 - Registration: http://go.nagarro.com/gdcr23-vienna
 - Date: 2023-11-04 09:00-17:00 (08:15 if you join breakfast)
 - Location: Nagarro GmbH (https://www.nagarro.at), Am Europlatz 2, 1120 Wien (Building: EURO PLAZA 4)
-- Topic: ???
+- Topic: Focus on different TDD styles (test-first development)
 - Tagline: A day of deliberate practice and learning
 - Schedule: ???
 
