@@ -1,0 +1,76 @@
+## Outside you say?
+
+![](./sessions/01_session/outside-in.png){width=80% fig-align="center"}
+
+---
+
+## Big Units!
+
+<br>
+
+![](./sessions/01_session/isolate.png){width=80% fig-align="center"}
+
+<br>
+
+::: {style="font-size: 70%;"}
+Picture stolen from martinfowler.com
+:::
+
+---
+
+## Focus on State!
+
+::: {style="font-size: 70%;"}
+(not action)
+:::
+
+<br>
+
+![](./sessions/01_session/focus-on-state.png){width=80% fig-align="center"}
+
+---
+
+## Kata: Tetris
+
+![](./sessions/01_session/Typical_Tetris_Game.png){width=80% fig-align="center"}
+
+---
+
+## Tetris: Gameplay 🕹️🏗️💯
+
+* Pieces descend onto playing field
+* Player arranges pieces to complete lines
+* Completed lines disappear and grant points
+* Game ends when uncleared lines reach the top
+* The more points the better
+
+---
+
+## Session 1: Pen & Paper 📝🤔💬
+
+Before we start coding, let's think:
+
+* Identify concepts and components
+* **Simplify!**
+* Make a sketch
+* Be explicit
+* **Derive test cases**
+
+---
+
+{{< include ./sessions/_learning_and_practicing.qmd >}}
+
+---
+
+{{< include ./sessions/_pairing.qmd >}}
+
+---
+
+{{< include ./sessions/_retrospective.qmd >}}
+
+* How did you simplify?
+* What is your first test case?
+
+---
+
+{{< include ./sessions/_short_break.qmd >}}

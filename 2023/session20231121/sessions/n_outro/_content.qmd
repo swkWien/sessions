@@ -1,30 +1,8 @@
-# Our retreat is coming to an end...
-
----
-
-## We explored different strategies to facilitate test-driven development 📊
-
-Put a post-it:
-
-- 🟨 What was most intruiging? Aha-effect! ;)
-- 🟥 Where would you like to invest?
-
----
-
-## Final Sharing 🏟️
-
-* What did you enjoy?
-* How do you leave?
-
-*🤏 Briefly.*
-
----
-
 ## You liked it? Come again! 🔁
 
 <br>
 
-**Coding dojo with Rea @ 2023-11-21**
+**Next Dojo: January 2024**
 
 <br>
 
@@ -42,14 +20,6 @@ Follow us on
 :::
 
 ::::
-
----
-
-::: {.r-fit-text}
-On your way out
-<br>
-say thank you 🤝
-:::
 
 ---
 

@@ -16,5 +16,5 @@ format:
     footer: "Coding Dojo Nov. 2023 by [Softwerkskammer Wien](https://swkwien.github.io/)"
     incremental: false  ## https://quarto.org/docs/presentations/revealjs/#incremental-lists
     theme: simple  ## https://quarto.org/docs/presentations/revealjs/#themes
-    logo: https://www.coderetreat.org/assets/logo-300x.png
+    logo: ./_swkLogo.png
     # auto-stretch: true  # https://quarto.org/docs/presentations/revealjs/advanced.html#stretch

@@ -1,20 +1,26 @@
-*Softwerkskammer Wien proudly presents:*
-
 ## TDD Outside-in without mocks
 
-📆 Tuesday, 21. Nov. 2023, 6pm to 8pm
+**Coding Dojo**
+
+Facilitator: [Rea Sutter](https://www.reasu.at)
 
 ---
 
-## Welcome!
+::: {.r-fit-text}
+Welcome! 🥳
+:::
 
-**Check-in:** How are you feeling this minute?
+---
+
+## Check-in 🔎 📈 📉
+
+How are you feeling this minute?
 
 ---
 
 ## Some Background
 
-- Global Day of Code Retreat (4.11.23)
+- Global Day of Code Retreat (4. Nov. 2023)
 - Topic of the day: Different styles of TDD 
 
 ---
@@ -29,9 +35,10 @@
 
 ---
 
-- Final retro: 
-    - 🟨 What did you find most intriguing?
-    - 🟥 Where would you like to invest?
+## Final retro: 
+
+- 🟨 What did you find most intriguing?
+- 🟥 Where would you like to invest?
 
 ---
 

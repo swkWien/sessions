@@ -1,5 +1,4 @@
 {{< include sessions/00_intro/_content.qmd >}}
-{{< include sessions/01_kata_and_focus/_content.qmd >}}
-<!-- {{< include sessions/02_pen_and_paper/_content.qmd >}} -->
-<!-- {{< include sessions/04_outsidein_without_mocks/_content.qmd >}} -->
-<!-- {{< include sessions/n_outro/_content.qmd >}} -->
+{{< include sessions/01_session/_content.qmd >}}
+{{< include sessions/02_session/_content.qmd >}}
+{{< include sessions/n_outro/_content.qmd >}}

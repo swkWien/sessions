@@ -1,0 +1,23 @@
+## Session 2: Implementation
+
+<br>
+
+![](./sessions/programming.png){width=10% fig-align="center"}
+
+---
+
+{{< include ./sessions/_learning_and_practicing.qmd >}}
+
+---
+
+{{< include ./sessions/_pairing.qmd >}}
+
+---
+
+{{< include ./sessions/_retrospective.qmd >}}
+
+* What went well, and what didn't?
+* How did it feel?
+* How are you leaving?
+
+---
