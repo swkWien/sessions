@@ -1,0 +1,84 @@
+# Classical TDD {{< fa arrow-right-from-bracket >}}
+
+Focus: Warm up your TDD and pairing muscles
+
+Facilitator: Rea Sutter 
+
+---
+
+## Get Your Hands Dirty 🛠️👷🏗️
+
+> **Classical TDD / Detroit School**
+
+
+Work inside out {{< fa arrow-right-from-bracket >}}
+
+Start with a simple test
+
+Switch roles ping-pong style
+
+---
+
+## How to TDD 🤔✅💡
+
+🟥 RED - write a test and see it fail
+
+🟩 GREEN - write **minimal amount** of code to pass the test
+
+🟨 REFACTOR - don't add/change functionality!
+
+&nbsp;
+
+🔁 REPEAT
+
+---
+
+## How to Ping Pong 🤔🏓💡
+
+::: {.fragment}
+🟥 🅰️ writes a test, sees it fail
+:::
+
+::: {.fragment}
+🟩 🇧 writes the code, sees test(s) succeed
+:::
+
+::: {.fragment}
+🟨 🅰️ and/or 🇧 refactors, test(s) still green
+:::
+
+::: {.fragment}
+🟥 🇧 writes the next test, sees it fail
+:::
+
+::: {.fragment}
+🟩 🅰️ writes the code, sees tests succeed
+:::
+
+::: {.fragment}
+🟨 🟥 🟩 🟨 etc.
+:::
+
+---
+
+## Demo 🧐💻
+
+---
+
+{{< include ./sessions/_pairing.qmd >}}
+
+---
+
+{{< include ./sessions/_learning_and_practicing.qmd >}}
+
+---
+
+{{< include ./sessions/_retrospective.qmd >}}
+
+* What went well?
+* What was your first test?
+* Which role do you prefer, and why?
+
+---
+
+{{< include ./sessions/_short_break.qmd >}}

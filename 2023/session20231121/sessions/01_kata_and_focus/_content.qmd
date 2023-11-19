@@ -1,0 +1,82 @@
+# Today's Practice 🥷
+
+---
+
+## Tetris🕹️🏗️💯
+\
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+::: {style="font-size: 75%;"}
+\
+
+* Tetris is a popular block-stacking puzzle game 
+* Created by Alexey Pajitnov in 1985
+:::
+:::
+
+::: {.column width="60%"}
+![](./sessions/01_kata_and_focus/Tetris_collection_Simon_Laroche.jpg){fig-align="center"}
+:::
+
+::::
+
+
+---
+
+## Pair Programming 🤝 {.center}
+
+\
+
+. . .
+
+*"Pair programming is a conversation between people, where the byproduct is code."*  
+
+
+## Pair Programming Habits 🤝
+
+
+Roles:
+
+- 🧭 **Navigator** Giving directions, looking ahead
+- 🚗 **Driver** Manipulating the code, concerned with details
+
+. . .
+
+Procedure:
+
+- Talk to each other
+- Switch roles every **regulary**
+
+---
+
+## Test-driven Development 🧪
+
+. . .
+
+- If you write new code, write a test first
+
+- If you change code, is it covered by tests?
+
+---
+
+## Today's slogan 💬
+
+. . .
+
+- **Exploring different TDD Styles**
+- Looking at strategies to facilitate test-driven development
+
+---
+
+## How do we get there? 🤓
+
+- Revisit same problem repeatedly
+
+- Try different strategies to improve your know-how and experience
+
+---
+
+## Questions? 

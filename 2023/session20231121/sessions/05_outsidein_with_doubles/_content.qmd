@@ -1,0 +1,139 @@
+# Session 4: Outside-In with test doubles {{< fa arrow-right-to-bracket >}}
+
+<br>
+
+Focus: separation of the system under test<br> and its collaborators 🧬
+
+<br>
+
+Facilitator: Adam Zielinski
+
+---
+
+## You'll never walk alone 🚶
+
+<br>
+
+Motivation: often the tested unit relies on other units (**collaborators**) to fulfill its behaviour
+
+* What's the unit under test? 🧐 (Separation of concerns)
+* Test non-pure interfaces (indirect input / indirect output)
+* Keep code simple: fast, minimal, easy to change
+* Avoid: fragile tests, non-determinism
+
+---
+
+![](./sessions/05_outsidein_with_doubles/easy_change.png){width=80% fig-align="center"}
+
+---
+
+## Test doubles 🪢
+
+<br>
+
+A pattern where you replace a production object for testing purposes
+
+::: {style="font-size: 70%;"}
+^📚^ [xUnit Test Patterns (Meszaros 2007)](http://xunitpatterns.com/)  
+^📚^ [martinfowler.com/articles/mocksArentStubs.html](https://martinfowler.com/articles/mocksArentStubs.html)  
+^📚^ [wikipedia.org/wiki/Test_double](https://en.wikipedia.org/wiki/Test_double)  
+:::
+
+---
+
+## Test double patterns 🥽
+
+. . .
+
+::: {style="font-size: 90%;"}
+* Provide a specific response to a method call
+  * **Fakes**: working implementation, oversimplified
+  * **Stubs**: provides canned answers
+* Verify the behavior of the code under test
+  * **Spy**: records information based on how they were called
+  * **Mock**: defines expectations of how it will be used
+:::
+
+::: {style="font-size: 70%;"}
+^📚^ [The Little Mocker (Clean Code Blog)](https://blog.cleancoder.com/uncle-bob/2014/05/14/TheLittleMocker.html)  
+:::
+
+<!--
+
+* State verification: Fake Object, Stubs
+* Behavior verification: Spy, Mock (the Sherlock Holmes of unit testing)
+
+::: {style="font-size: 70%;"}
+* **Fake** objects actually have working implementations, but usually take
+  some shortcut which makes them not suitable for production.
+* **Stubs** provide canned answers to calls made during the test,
+  usually not responding at all to anything outside what's programmed in for the test.
+* **Spies** are stubs that also record some information based on how they were called.e
+  One form of this might be an email service that records how many messages it was sent.
+* **Mocks** objects pre-programmed with expectations which form a specification of
+  the calls they are expected to receive.
+:::
+
+[martinfowler.com/bliki/TestDouble.html](https://www.martinfowler.com/bliki/TestDouble.html)
+
+-->
+
+---
+
+## Test doubles goes Tetris 🗼
+
+::: {style="font-size: 80%;"}
+```typescript
+interface Bottom {
+
+    /** Check a piece has contact with bottom */
+    touches(piece: Piece): boolean
+
+    /** Add the piece to the bottom because it has landed */
+    land(piece: Piece): void
+
+    /**
+     * Check for full lines and remove the returned lines,
+     * empty when no full lines there
+     * count from bottom, 0 is lowest.
+     */
+    removeFullLines(): number[]
+
+    /** Return max height of the different columns of bottom. */
+    maximumHeight(): number
+
+}
+```
+:::
+
+---
+
+## Focus areas
+
+* Work Outside-In
+* Use test doubles
+  + No framework 😌
+  + python ([Doubles](https://doubles.readthedocs.io/en/latest/) / [unittest.mock](https://docs.python.org/3/library/unittest.mock.html))
+  + JVM ([Mockito](https://site.mockito.org/) / [EasyMock](https://easymock.org/user-guide.html))
+  + JS ([Jest](https://jestjs.io/docs/mock-functions) / [Sinon](https://sinonjs.org/))
+* Extra Challenge: Utilize all methods of `Bottom` interface
+
+---
+
+{{< include ./sessions/_pairing.qmd >}}
+
+---
+
+{{< include ./sessions/_learning_and_practicing.qmd >}}
+
+---
+
+{{< include ./sessions/_retrospective.qmd >}}
+
+* What went well?
+* What was your first test?
+* What advantages could you identify when using test doubles?
+
+---
+
+{{< include ./sessions/_short_break.qmd >}}

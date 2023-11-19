@@ -1,0 +1,20 @@
+project:
+  render:
+    - "*.qmd"
+    - "!*private.qmd"
+  # https://quarto.org/docs/reference/projects/options.html
+  preview:
+    port: 4200
+    browser: true
+    watch-inputs: true
+
+format:
+  revealjs:
+    title: "TDD<br>Outside-In<br>Without Mocks"
+    center: true
+    scrollable: true
+    footer: "Coding Dojo Nov. 2023 by [Softwerkskammer Wien](https://swkwien.github.io/)"
+    incremental: false  ## https://quarto.org/docs/presentations/revealjs/#incremental-lists
+    theme: simple  ## https://quarto.org/docs/presentations/revealjs/#themes
+    logo: https://www.coderetreat.org/assets/logo-300x.png
+    # auto-stretch: true  # https://quarto.org/docs/presentations/revealjs/advanced.html#stretch

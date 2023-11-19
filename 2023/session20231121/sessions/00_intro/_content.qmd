@@ -1,0 +1,113 @@
+# Global Day of Coderetreat
+
+*Welcome to a day of deliberate practice and learning!*
+
+---
+
+## Which Language? 💬
+
+Spricht jemand nur Deutsch? Bitte melden.
+
+Does anyone speak only English? Please report.
+
+---
+
+## Big Thank you to Nagarro! 💗
+
+Thank you very much for hosting us!
+
+---
+
+## Dinner 🍽️
+
+Who wants to join dinner?
+
+*Please raise your hand.*
+
+---
+
+## Is this your first Coderetreat? 🥇
+
+*Please raise your hand.*
+
+---
+
+## What is a Coderetreat? 🤔
+
+> A day of deliberate practice and learning.
+
+---
+
+### Deliberate Practice and Learning?
+
+- Not about getting things done
+- Doing things differently
+- Try out new ideas
+- Do it right!
+
+---
+
+### How does it work?
+
+- We work on the same problem repeatedly.
+- Try out different approaches.
+- Learn from each other.
+
+Practice - reflect - improve! 🥳
+
+---
+
+## Schedule 🕤 {.smaller}
+
+| Time  | Topic  |
+|-------|--------|
+| 08:20 | Arrival & Breakfast |
+| 09:00 | Welcome at Nagarro |
+| 09:10 | Intro Coderetreat 👈 |
+| 10:00 | Session 1 by Claus Aichinger |
+| 10:50 | Session 2 by Rea Sutter | 
+| 12:20 | Session 3 by Gregor Riegler |
+| 13:30 | Lunch Break |
+| 14:20 | Session 4 by Adam Zielinski |
+| 15:30 | Session 5 by Roland Germ |
+| 16:40 | Final Retrospective
+| 17:00 | Closing |
+
+---
+
+## About us 👋
+
+*Facilitators in order of appearance.*
+
+* Claus Aichinger [@clausaichinger](https://twitter.com/ClausAichinger)  
+* Rea Sutter  
+* Gregor Riegler [@gregor_riegler](https://twitter.com/gregor_riegler)  
+* Adam Zielinski [@adam0x5A](https://twitter.com/adam0x5A)  
+* Roland Germ [@rolgerm](https://twitter.com/rolgerm)  
+
+---
+
+## What about you? 💐
+
+Let's get to know each other:
+
+* Who are you?
+* Why is it better to be here than elsewhere?
+* What will you contribute?
+
+Form groups of three (with people you don't know).
+
+---
+
+## Code of Conduct 🤝
+
+This code of conduct outlines our expectations for participants within our community:
+
+* Be friendly and patient. Be welcoming.
+* Be mindful of your peers.
+* Be respectful.
+* Be careful in the words that we choose.
+
+---
+
+## Questions?
