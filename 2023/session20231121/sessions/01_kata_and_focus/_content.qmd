@@ -1,82 +1,72 @@
-# Today's Practice 🥷
+## Kata: Tetris
+
+![](./sessions/01_kata_and_focus/Typical_Tetris_Game.png){width=80% fig-align="center"}
 
 ---
 
-## Tetris🕹️🏗️💯
-\
+## Tetris: Gameplay 🕹️🏗️💯
 
-:::: {.columns}
+* Pieces descend onto playing field
+* Player arranges pieces to complete lines
+* Completed lines disappear and grant points
+* Game ends when uncleared lines reach the top
+* The more points the better
 
-::: {.column width="40%"}
+---
 
-::: {style="font-size: 75%;"}
-\
+## Outside you say?
 
-* Tetris is a popular block-stacking puzzle game 
-* Created by Alexey Pajitnov in 1985
+![](./sessions/01_kata_and_focus/outside-in.png){width=80% fig-align="center"}
+
+---
+
+## Big Units!
+
+<br>
+
+![](./sessions/01_kata_and_focus/isolate.png){width=80% fig-align="center"}
+
+<br>
+
+Picture stolen from martinfowler.com
+
+---
+
+## Focus on State!
+
+::: {style="font-size: 70%;"}
+(not action)
 :::
-:::
 
-::: {.column width="60%"}
-![](./sessions/01_kata_and_focus/Tetris_collection_Simon_Laroche.jpg){fig-align="center"}
-:::
+<br>
 
-::::
-
+![](./sessions/01_kata_and_focus/focus-on-state.png){width=80% fig-align="center"}
 
 ---
 
-## Pair Programming 🤝 {.center}
 
-\
+## Session 1: Pen & Paper 📝🤔💬
 
-. . .
+Before we start coding, let's think:
 
-*"Pair programming is a conversation between people, where the byproduct is code."*  
-
-
-## Pair Programming Habits 🤝
-
-
-Roles:
-
-- 🧭 **Navigator** Giving directions, looking ahead
-- 🚗 **Driver** Manipulating the code, concerned with details
-
-. . .
-
-Procedure:
-
-- Talk to each other
-- Switch roles every **regulary**
+* Identify concepts and components
+* **Simplify!**
+* Make a sketch
+* Be explicit
+* **Derive test cases**
 
 ---
 
-## Test-driven Development 🧪
 
-. . .
-
-- If you write new code, write a test first
-
-- If you change code, is it covered by tests?
+{{< include ./sessions/_pairing.qmd >}}
 
 ---
 
-## Today's slogan 💬
+{{< include ./sessions/_retrospective.qmd >}}
 
-. . .
-
-- **Exploring different TDD Styles**
-- Looking at strategies to facilitate test-driven development
+* How did you simplify?
+* What is your first test case?
 
 ---
 
-## How do we get there? 🤓
-
-- Revisit same problem repeatedly
-
-- Try different strategies to improve your know-how and experience
-
----
-
-## Questions? 
+{{< include ./sessions/_short_break.qmd >}}

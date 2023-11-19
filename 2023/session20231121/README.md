@@ -16,6 +16,7 @@ the rendered slides [here](https://swkwien.github.io/gdcr23/).)
 ### Add Content
 
 To add your showcase
+
 1. Copy-paste `template/` folder in the `sessions/` directory and rename it after your showcase and your name,
    e.g. `demo_octopus`.
 1. Adjust the `_content.qmd` according to guide your presentation/discussion.
@@ -29,6 +30,7 @@ your motivation of using the tools and your experience with them.*
 
 Copy-pasting sections from other contributors should work just fine.
 If you want to know more about Quarto, take a look at the official docs regarding
+
 * [presentations](https://quarto.org/docs/presentations/) and at the
 * [revealjs](https://quarto.org/docs/presentations/revealjs/) section if you want to leverage
   specific [reveal.js](https://revealjs.com/) features for your presentation.

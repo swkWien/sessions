@@ -1,113 +1,40 @@
-# Global Day of Coderetreat
+*Softwerkskammer Wien proudly presents:*
 
-*Welcome to a day of deliberate practice and learning!*
+## TDD Outside-in without mocks
 
----
-
-## Which Language? 💬
-
-Spricht jemand nur Deutsch? Bitte melden.
-
-Does anyone speak only English? Please report.
+📆 Tuesday, 21. Nov. 2023, 6pm to 8pm
 
 ---
 
-## Big Thank you to Nagarro! 💗
+## Welcome!
 
-Thank you very much for hosting us!
-
----
-
-## Dinner 🍽️
-
-Who wants to join dinner?
-
-*Please raise your hand.*
+**Check-in:** How are you feeling this minute?
 
 ---
 
-## Is this your first Coderetreat? 🥇
+## Some Background
 
-*Please raise your hand.*
-
----
-
-## What is a Coderetreat? 🤔
-
-> A day of deliberate practice and learning.
+- Global Day of Code Retreat (4.11.23)
+- Topic of the day: Different styles of TDD 
 
 ---
 
-### Deliberate Practice and Learning?
-
-- Not about getting things done
-- Doing things differently
-- Try out new ideas
-- Do it right!
-
----
-
-### How does it work?
-
-- We work on the same problem repeatedly.
-- Try out different approaches.
-- Learn from each other.
-
-Practice - reflect - improve! 🥳
+:::{style="font-size: 75%;"}
+| Strategy ➡️<br>Aspect ⬇️ | Classical TDD | Outside in without Mocks | Outside in with Mocks/Doubles |
+|------------|--------------|----------------|----------------|
+| Direction | Inside-Out | Outside-in | Outside-In |
+| Start with ... | simplified system | simplified system | complex system |
+| Use of Mocks | avoid | avoid | embrace |
+:::
 
 ---
 
-## Schedule 🕤 {.smaller}
-
-| Time  | Topic  |
-|-------|--------|
-| 08:20 | Arrival & Breakfast |
-| 09:00 | Welcome at Nagarro |
-| 09:10 | Intro Coderetreat 👈 |
-| 10:00 | Session 1 by Claus Aichinger |
-| 10:50 | Session 2 by Rea Sutter | 
-| 12:20 | Session 3 by Gregor Riegler |
-| 13:30 | Lunch Break |
-| 14:20 | Session 4 by Adam Zielinski |
-| 15:30 | Session 5 by Roland Germ |
-| 16:40 | Final Retrospective
-| 17:00 | Closing |
+- Final retro: 
+    - 🟨 What did you find most intriguing?
+    - 🟥 Where would you like to invest?
 
 ---
 
-## About us 👋
-
-*Facilitators in order of appearance.*
-
-* Claus Aichinger [@clausaichinger](https://twitter.com/ClausAichinger)  
-* Rea Sutter  
-* Gregor Riegler [@gregor_riegler](https://twitter.com/gregor_riegler)  
-* Adam Zielinski [@adam0x5A](https://twitter.com/adam0x5A)  
-* Roland Germ [@rolgerm](https://twitter.com/rolgerm)  
+![](./sessions/final-retro-results.png){width=80% fig-align="center"}
 
 ---
-
-## What about you? 💐
-
-Let's get to know each other:
-
-* Who are you?
-* Why is it better to be here than elsewhere?
-* What will you contribute?
-
-Form groups of three (with people you don't know).
-
----
-
-## Code of Conduct 🤝
-
-This code of conduct outlines our expectations for participants within our community:
-
-* Be friendly and patient. Be welcoming.
-* Be mindful of your peers.
-* Be respectful.
-* Be careful in the words that we choose.
-
----
-
-## Questions?

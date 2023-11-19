@@ -1,15 +1,3 @@
-# Session 3: Outside-In without Mocks {{< fa arrow-right-to-bracket >}}
-
-<br>
-
-Focus: **Ignore the inside** and **avoid mocks** by using **Sociable Tests** and **State-Based Tests**.
-
-<br>
-
-Facilitator: Gregor Riegler
-
----
-
 ## Outside you say?
 
 ![](./sessions/04_outsidein_without_mocks/outside-in.png){width=80% fig-align="center"}
