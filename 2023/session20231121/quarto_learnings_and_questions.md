@@ -7,4 +7,4 @@ Is there a different way to compose slides from various files other that using t
 
 You need to **run `quarto publish gh-pages` once**, see [here](https://github.com/quarto-dev/quarto-actions/blob/main/examples/example-01-basics.md). Seems to be doing quite a lot...
 
-You can include fontawesome through an extension https://github.com/quarto-ext/fontawesome
+You can include fontawesome through an extension https://github.com/quarto-ext/fontawesome like this: ```quarto add quarto-ext/fontawesome```
