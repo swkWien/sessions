@@ -1,0 +1,426 @@
+
+<link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<script language="javascript">
+  function isInternetExplorer() {
+    ua = navigator.userAgent;
+    /* MSIE used to detect old browsers and Trident used to newer ones*/
+    return ua.indexOf("MSIE ") > -1 || ua.indexOf("Trident/") > -1;
+  }
+
+  /* Define the Animation class */
+  function Animation(frames, img_id, slider_id, interval, loop_select_id){
+    this.img_id = img_id;
+    this.slider_id = slider_id;
+    this.loop_select_id = loop_select_id;
+    this.interval = interval;
+    this.current_frame = 0;
+    this.direction = 0;
+    this.timer = null;
+    this.frames = new Array(frames.length);
+
+    for (var i=0; i<frames.length; i++)
+    {
+     this.frames[i] = new Image();
+     this.frames[i].src = frames[i];
+    }
+    var slider = document.getElementById(this.slider_id);
+    slider.max = this.frames.length - 1;
+    if (isInternetExplorer()) {
+        // switch from oninput to onchange because IE <= 11 does not conform
+        // with W3C specification. It ignores oninput and onchange behaves
+        // like oninput. In contrast, Microsoft Edge behaves correctly.
+        slider.setAttribute('onchange', slider.getAttribute('oninput'));
+        slider.setAttribute('oninput', null);
+    }
+    this.set_frame(this.current_frame);
+  }
+
+  Animation.prototype.get_loop_state = function(){
+    var button_group = document[this.loop_select_id].state;
+    for (var i = 0; i < button_group.length; i++) {
+        var button = button_group[i];
+        if (button.checked) {
+            return button.value;
+        }
+    }
+    return undefined;
+  }
+
+  Animation.prototype.set_frame = function(frame){
+    this.current_frame = frame;
+    document.getElementById(this.img_id).src =
+            this.frames[this.current_frame].src;
+    document.getElementById(this.slider_id).value = this.current_frame;
+  }
+
+  Animation.prototype.next_frame = function()
+  {
+    this.set_frame(Math.min(this.frames.length - 1, this.current_frame + 1));
+  }
+
+  Animation.prototype.previous_frame = function()
+  {
+    this.set_frame(Math.max(0, this.current_frame - 1));
+  }
+
+  Animation.prototype.first_frame = function()
+  {
+    this.set_frame(0);
+  }
+
+  Animation.prototype.last_frame = function()
+  {
+    this.set_frame(this.frames.length - 1);
+  }
+
+  Animation.prototype.slower = function()
+  {
+    this.interval /= 0.7;
+    if(this.direction > 0){this.play_animation();}
+    else if(this.direction < 0){this.reverse_animation();}
+  }
+
+  Animation.prototype.faster = function()
+  {
+    this.interval *= 0.7;
+    if(this.direction > 0){this.play_animation();}
+    else if(this.direction < 0){this.reverse_animation();}
+  }
+
+  Animation.prototype.anim_step_forward = function()
+  {
+    this.current_frame += 1;
+    if(this.current_frame < this.frames.length){
+      this.set_frame(this.current_frame);
+    }else{
+      var loop_state = this.get_loop_state();
+      if(loop_state == "loop"){
+        this.first_frame();
+      }else if(loop_state == "reflect"){
+        this.last_frame();
+        this.reverse_animation();
+      }else{
+        this.pause_animation();
+        this.last_frame();
+      }
+    }
+  }
+
+  Animation.prototype.anim_step_reverse = function()
+  {
+    this.current_frame -= 1;
+    if(this.current_frame >= 0){
+      this.set_frame(this.current_frame);
+    }else{
+      var loop_state = this.get_loop_state();
+      if(loop_state == "loop"){
+        this.last_frame();
+      }else if(loop_state == "reflect"){
+        this.first_frame();
+        this.play_animation();
+      }else{
+        this.pause_animation();
+        this.first_frame();
+      }
+    }
+  }
+
+  Animation.prototype.pause_animation = function()
+  {
+    this.direction = 0;
+    if (this.timer){
+      clearInterval(this.timer);
+      this.timer = null;
+    }
+  }
+
+  Animation.prototype.play_animation = function()
+  {
+    this.pause_animation();
+    this.direction = 1;
+    var t = this;
+    if (!this.timer) this.timer = setInterval(function() {
+        t.anim_step_forward();
+    }, this.interval);
+  }
+
+  Animation.prototype.reverse_animation = function()
+  {
+    this.pause_animation();
+    this.direction = -1;
+    var t = this;
+    if (!this.timer) this.timer = setInterval(function() {
+        t.anim_step_reverse();
+    }, this.interval);
+  }
+</script>
+
+<style>
+.animation {
+    display: inline-block;
+    text-align: center;
+}
+input[type=range].anim-slider {
+    width: 374px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.anim-buttons {
+    margin: 8px 0px;
+}
+.anim-buttons button {
+    padding: 0;
+    width: 36px;
+}
+.anim-state label {
+    margin-right: 8px;
+}
+.anim-state input {
+    margin: 0;
+    vertical-align: middle;
+}
+</style>
+
+<div class="animation">
+  <img id="_anim_img7a4c1ec3b4ea44d4bfefbbf14f9e4034">
+  <div class="anim-controls">
+    <input id="_anim_slider7a4c1ec3b4ea44d4bfefbbf14f9e4034" type="range" class="anim-slider"
+           name="points" min="0" max="1" step="1" value="0"
+           oninput="anim7a4c1ec3b4ea44d4bfefbbf14f9e4034.set_frame(parseInt(this.value));">
+    <div class="anim-buttons">
+      <button title="Decrease speed" aria-label="Decrease speed" onclick="anim7a4c1ec3b4ea44d4bfefbbf14f9e4034.slower()">
+          <i class="fa fa-minus"></i></button>
+      <button title="First frame" aria-label="First frame" onclick="anim7a4c1ec3b4ea44d4bfefbbf14f9e4034.first_frame()">
+        <i class="fa fa-fast-backward"></i></button>
+      <button title="Previous frame" aria-label="Previous frame" onclick="anim7a4c1ec3b4ea44d4bfefbbf14f9e4034.previous_frame()">
+          <i class="fa fa-step-backward"></i></button>
+      <button title="Play backwards" aria-label="Play backwards" onclick="anim7a4c1ec3b4ea44d4bfefbbf14f9e4034.reverse_animation()">
+          <i class="fa fa-play fa-flip-horizontal"></i></button>
+      <button title="Pause" aria-label="Pause" onclick="anim7a4c1ec3b4ea44d4bfefbbf14f9e4034.pause_animation()">
+          <i class="fa fa-pause"></i></button>
+      <button title="Play" aria-label="Play" onclick="anim7a4c1ec3b4ea44d4bfefbbf14f9e4034.play_animation()">
+          <i class="fa fa-play"></i></button>
+      <button title="Next frame" aria-label="Next frame" onclick="anim7a4c1ec3b4ea44d4bfefbbf14f9e4034.next_frame()">
+          <i class="fa fa-step-forward"></i></button>
+      <button title="Last frame" aria-label="Last frame" onclick="anim7a4c1ec3b4ea44d4bfefbbf14f9e4034.last_frame()">
+          <i class="fa fa-fast-forward"></i></button>
+      <button title="Increase speed" aria-label="Increase speed" onclick="anim7a4c1ec3b4ea44d4bfefbbf14f9e4034.faster()">
+          <i class="fa fa-plus"></i></button>
+    </div>
+    <form title="Repetition mode" aria-label="Repetition mode" action="#n" name="_anim_loop_select7a4c1ec3b4ea44d4bfefbbf14f9e4034"
+          class="anim-state">
+      <input type="radio" name="state" value="once" id="_anim_radio1_7a4c1ec3b4ea44d4bfefbbf14f9e4034"
+             >
+      <label for="_anim_radio1_7a4c1ec3b4ea44d4bfefbbf14f9e4034">Once</label>
+      <input type="radio" name="state" value="loop" id="_anim_radio2_7a4c1ec3b4ea44d4bfefbbf14f9e4034"
+             checked>
+      <label for="_anim_radio2_7a4c1ec3b4ea44d4bfefbbf14f9e4034">Loop</label>
+      <input type="radio" name="state" value="reflect" id="_anim_radio3_7a4c1ec3b4ea44d4bfefbbf14f9e4034"
+             >
+      <label for="_anim_radio3_7a4c1ec3b4ea44d4bfefbbf14f9e4034">Reflect</label>
+    </form>
+  </div>
+</div>
+
+
+<script language="javascript">
+  /* Instantiate the Animation class. */
+  /* The IDs given should match those used in the template above. */
+  (function() {
+    var img_id = "_anim_img7a4c1ec3b4ea44d4bfefbbf14f9e4034";
+    var slider_id = "_anim_slider7a4c1ec3b4ea44d4bfefbbf14f9e4034";
+    var loop_select_id = "_anim_loop_select7a4c1ec3b4ea44d4bfefbbf14f9e4034";
+    var frames = new Array(2);
+    
+  frames[0] = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAYAAADL1t+KAAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90\
+bGliIHZlcnNpb24zLjguMCwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy81sbWrAAAACXBIWXMAAA9h\
+AAAPYQGoP6dpAAATSUlEQVR4nO3dfazWdf3H8dfFjcDEW2A2bHrIEnWi5qS8aYE3zYVh2eambUw3\
+2/qjUoMUKAmtTeWYiv7SP0yNlnNZs5ulTUqQbhwjnYkVGnmDrqQETASDBLx+f1zzuCNICudwnfM+\
+j8c/cH3PdX2/7+uPw5PP93zP92o0m81mAIB+bVC7BwAAdp+gA0ABgg4ABQg6ABQg6ABQgKADQAGC\
+DgAFCDoAFCDoAFCAoANAAYIOAAUIOgAUIOgAUICgA0ABgg4ABQg6ABQg6ABQgKADQAGCDgAFCDoA\
+FCDoAFCAoANAAYIOAAUIOgAUIOgAUICgA0ABgg4ABQg6ABQg6ABQgKADQAGCDgAFCDoAFCDoAFCA\
+oANAAYIOAAUIOgAUIOgAUICgA0ABgg4ABQg69IJly5blnHPOySGHHJJhw4bloIMOykknnZQZM2Z0\
+PWfy5MmZPHlyW+ZbsmRJGo1GlixZ8p5fu2LFilx55ZVZtWrVdl+78MIL09HRsdvzAe+doEMPu//+\
++3PyySfn1VdfTWdnZ371q1/lpptuyimnnJJ77rmn63m33nprbr311jZOumtWrFiRq666aodBnzNn\
+Tn7605/u+aGADGn3AFBNZ2dnxo0bl4ULF2bIkLe+xc4777x0dnZ2PT7qqKPaMV6vOuyww9o9AgxY\
+VujQw9atW5fRo0d3i/mbBg1661vu7afcV61alUajkeuuuy7z5s1LR0dHRowYkcmTJ2flypXZsmVL\
+Zs2albFjx2a//fbLOeeck5deeqnb/huNRq688srtjtvR0ZELL7xwp3M/+uijOe+887qO29HRkfPP\
+Pz/PP/9813MWLFiQc889N0ly6qmnptFopNFoZMGCBUl2fMp98+bNmT17dsaNG5e99torBx98cL74\
+xS/mlVde2W7GT33qU3nggQdy/PHHZ8SIETniiCNy55137nRuoEXQoYeddNJJWbZsWS6++OIsW7Ys\
+W7ZseU+vv+WWW/Lwww/nlltuye23356nnnoqU6dOzUUXXZQ1a9bkzjvvTGdnZx588MF8/vOf77G5\
+V61alfHjx2f+/PlZuHBh5s2bl9WrV2fixIlZu3ZtkuSss87K1Vdf3TXn0qVLs3Tp0px11lk73Gez\
+2cxnPvOZfPvb3860adNy//33Z/r06fn+97+f0047Lf/973+7PX/58uWZMWNGvvKVr+TnP/95jjnm\
+mFx00UX57W9/22PvE8pqAj1q7dq1zY997GPNJM0kzaFDhzZPPvnk5jXXXNPcsGFD1/MmTZrUnDRp\
+Utfj5557rpmkeeyxxza3bdvWtX3+/PnNJM2zzz6723EuvfTSZpLm+vXru7Ylac6dO3e7mQ499NDm\
+BRdc0PX4oYceaiZpPvTQQ+/4PrZu3drcuHFjc++9927edNNNXdt//OMfv+NrL7jgguahhx7a9fiB\
+Bx5oJml2dnZ2e94999zTTNK87bbbus04fPjw5vPPP9+1bdOmTc0DDzyw+YUvfOEd5wRarNChh40a\
+NSq/+93v8sgjj+Taa6/Npz/96axcuTKzZ8/OhAkTula772TKlCndTs0feeSRSbLdKvjN7S+88EKP\
+zL1x48bMnDkzH/zgBzNkyJAMGTIkI0eOzGuvvZYnn3xyl/a5ePHiJNnudP+5556bvffeO4sWLeq2\
+/bjjjsshhxzS9Xj48OE5/PDDu532B3bMRXHQS0444YSccMIJSZItW7Zk5syZufHGG9PZ2dnt4ri3\
+O/DAA7s93muvvXa6ffPmzT0y7+c+97ksWrQoc+bMycSJE7Pvvvum0WhkypQp2bRp0y7tc926dRky\
+ZEjGjBnTbXuj0cj73ve+rFu3rtv2UaNGbbePYcOG7fLxYSCxQoc9YOjQoZk7d26S5M9//nOvHWfY\
+sGHb/Vw6yXbhfLv169fnvvvuy+WXX55Zs2bl9NNPz8SJEzNhwoS8/PLLuzzPqFGjsnXr1qxZs6bb\
+9mazmX/+858ZPXr0Lu8b6E7QoYetXr16h9vfPG09duzYXjt2R0dHnnjiiW7bFi9enI0bN+70dY1G\
+I81mM8OGDeu2/fbbb8+2bdu6bXvzOe9m1Xz66acnSe66665u2++999689tprXV8Hdp9T7tDDzjzz\
+zLz//e/P1KlTc8QRR+SNN97I448/nuuvvz4jR47MJZdc0mvHnjZtWubMmZNvfOMbmTRpUlasWJHv\
+fOc72W+//Xb6un333Tcf//jHc91112X06NHp6OjIb37zm9xxxx3Zf//9uz336KOPTpLcdttt2Wef\
+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\
+AYIOAAUIOgAUIOgAUICgA0ABgg4ABQg6ABQg6ABQgKADQAGCDgAFCDoAFCDoAFCAoANAAYIOAAUI\
+OgAUIOgAUICgA0ABgg4ABQg6ABQg6ABQgKADQAGCDgAFCDoAFCDoAFCAoANAAYIOAAUIOgAUIOgA\
+UICgA0ABgg4ABQg6ABQg6ABQgKADQAGCDgAFCDoAFCDoAFCAoANAAYIOAAUIOgAUIOgAUICgA0AB\
+gg4ABQg6ABQg6ABQgKADQAGCDgAFCDoAFCDoAFCAoANAAYIOAAUIOgAUIOgAUICgA0ABgg4ABQg6\
+ABQg6ABQgKADQAGCDgAFCDoAFCDoAFCAoANAAYIOAAUIOgAUIOgAUICgA0ABgg4ABQg6ABQg6ABQ\
+gKADQAGCDgAFCDoAFCDoAFCAoANAAYIOAAUIOgAUIOgAUICgA0ABgg4ABQg6ABQg6ABQgKADQAGC\
+DgAFCDoAFCDoAFCAoANAAYIOAAUIOgAUIOgAUICgA0ABgg4ABQg6ABQg6ABQgKADQAGCDgAFCDoA\
+FCDoAFCAoANAAYIOAAUIOgAUIOgAUICgA0ABgg4ABQg6ABQg6ABQgKADQAGCDgAFCDoAFCDoAFCA\
+oANAAYIOAAUIOgAUIOgAUICgA0ABgg4ABQg6ABQg6ABQgKADQAGCDgAFCDoAFPD/y8ns7RuBaEcA\
+AAAASUVORK5CYII=\
+"
+  frames[1] = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAYAAADL1t+KAAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90\
+bGliIHZlcnNpb24zLjguMCwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy81sbWrAAAACXBIWXMAAA9h\
+AAAPYQGoP6dpAAATB0lEQVR4nO3df6yWdf3H8dcNB8H5W7CaNj2oKTlRc1KiTSAtE8UfNTetSJuu\
+XLUsGCBOxLZKPepXKNHlzHBzLktnP3RpJZCtEeaauIbMPxTbikpJUUwKDvf3j3vnuCNIAgfuw/s8\
+Hhtj98V939f7bLAnn+u67+tqNJvNZgCA3dqQdg8AAOw4QQeAAgQdAAoQdAAoQNABoABBB4ACBB0A\
+ChB0AChA0AGgAEEHgAIEHQAKEHQAKEDQAaAAQQeAAgQdAAoQdAAoQNABoABBB4ACBB0AChB0AChA\
+0AGgAEEHgAIEHQAKEHQAKEDQAaAAQQeAAgQdAAoQdAAoQNABoABBB4ACBB0AChB0AChA0AGgAEEH\
+gAIEHQAKEHQAKEDQAaAAQQeAAgQdAAoQdNgJli1blgsuuCCHHnpohg8fnve+970ZP358pk+f3vuc\
+iRMnZuLEiW2Zb8mSJWk0GlmyZMk2v3bFihW57rrrsmrVqs3+7NJLL01nZ+cOzwdsO0GHfvbII4/k\
+lFNOyWuvvZaurq786le/yvz583Pqqafm/vvv733e7bffnttvv72Nk26fFStW5Jvf/OYWgz5nzpw8\
+9NBDu34oIB3tHgCq6erqyujRo/PYY4+lo+Otf2IXXXRRurq6eh8fc8wx7RhvpzriiCPaPQIMWlbo\
+0M/WrFmTUaNG9Yl5jyFD3von9/ZD7qtWrUqj0chNN92UG2+8MZ2dndlzzz0zceLEPPfcc9mwYUOu\
+uuqqHHzwwdlvv/1ywQUX5J///Gef9280Grnuuus2229nZ2cuvfTSrc791FNP5aKLLurdb2dnZy6+\
++OK8+OKLvc9ZuHBhLrzwwiTJpEmT0mg00mg0snDhwiRbPuS+fv36zJ49O6NHj84ee+yRQw45JF/5\
+ylfy6quvbjbjOeeck0cffTQnnnhi9txzz4wZMyZ33333VucGWgQd+tn48eOzbNmyfO1rX8uyZcuy\
+YcOGbXr9ggUL8vvf/z4LFizIXXfdlZUrV2bKlCm57LLL8tJLL+Xuu+9OV1dXfvOb3+Tyyy/vt7lX\
+rVqVo48+OvPmzctjjz2WG2+8MatXr864cePy8ssvJ0nOPvvsfOc73+mdc+nSpVm6dGnOPvvsLb5n\
+s9nM+eefn5tvvjlTp07NI488kmnTpuWee+7Jxz72sfznP//p8/zly5dn+vTp+cY3vpGf/exnOe64\
+43LZZZfliSee6LefE8pqAv3q5Zdfbn70ox9tJmkmaQ4bNqx5yimnNK+//vrm66+/3vu8CRMmNCdM\
+mND7+IUXXmgmaR5//PHN7u7u3u3z5s1rJmmee+65ffbz9a9/vZmkuXbt2t5tSZpz587dbKbDDjus\
+eckll/Q+Xrx4cTNJc/Hixe/4c2zcuLG5bt265l577dWcP39+7/af/OQn7/jaSy65pHnYYYf1Pn70\
+0UebSZpdXV19nnf//fc3kzTvvPPOPjOOGDGi+eKLL/Zue/PNN5sHHnhg80tf+tI7zgm0WKFDPxs5\
+cmR+97vf5Y9//GNuuOGGnHfeeXnuuecye/bsjB07tne1+04mT57c59D8Bz/4wSTZbBXcs/0vf/lL\
+v8y9bt26zJo1K0ceeWQ6OjrS0dGRvffeO2+88UaeffbZ7XrPRYsWJclmh/svvPDC7LXXXnn88cf7\
+bD/hhBNy6KGH9j4eMWJEjjrqqD6H/YEt86E42ElOOumknHTSSUmSDRs2ZNasWbn11lvT1dXV58Nx\
+b3fggQf2ebzHHntsdfv69ev7Zd7PfOYzefzxxzNnzpyMGzcu++67bxqNRiZPnpw333xzu95zzZo1\
+6ejoyEEHHdRne6PRyPve976sWbOmz/aRI0du9h7Dhw/f7v3DYGKFDrvAsGHDMnfu3CTJn//85522\
+n+HDh292XjrJZuF8u7Vr1+bhhx/OzJkzc9VVV+X000/PuHHjMnbs2PzrX//a7nlGjhyZjRs35qWX\
+Xuqzvdls5u9//3tGjRq13e8N9CXo0M9Wr169xe09h60PPvjgnbbvzs7OPPPMM322LVq0KOvWrdvq\
+6xqNRprNZoYPH95n+1133ZXu7u4+23qe825WzaeffnqS5N577+2z/cEHH8wbb7zR++fAjnPIHfrZ\
+mWeemfe///2ZMmVKxowZk02bNuXpp5/OLbfckr333jtXXnnlTtv31KlTM2fOnFx77bWZMGFCVqxY\
+kdtuuy377bffVl+377775rTTTstNN92UUaNGpbOzM7/97W/zgx/8IPvvv3+f5x577LFJkjvvvDP7\
+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\
+gAIEHQAKEHQAKEDQAaAAQQeAAgQdAAoQdAAoQNABoABBB4ACBB0AChB0AChA0AGgAEEHgAIEHQAK\
+EHQAKEDQAaAAQQeAAgQdAAoQdAAoQNABoABBB4ACBB0AChB0AChA0AGgAEEHgAIEHQAKEHQAKEDQ\
+AaAAQQeAAgQdAAoQdAAoQNABoABBB4ACBB0AChB0AChA0AGgAEEHgAIEHQAKEHQAKEDQAaAAQQeA\
+AgQdAAoQdAAoQNABoABBB4ACBB0AChB0AChA0AGgAEEHgAIEHQAKEHQAKEDQAaAAQQeAAgQdAAoQ\
+dAAoQNABoABBB4ACBB0AChB0AChA0AGgAEEHgAIEHQAKEHQAKEDQAaAAQQeAAgQdAAoQdAAoQNAB\
+oABBB4ACBB0AChB0AChA0AGgAEEHgAIEHQAKEHQAKEDQAaAAQQeAAgQdAAoQdAAoQNABoABBB4AC\
+BB0AChB0AChA0AGgAEEHgAIEHQAKEHQAKEDQAaAAQQeAAgQdAAoQdAAoQNABoABBB4ACBB0AChB0\
+AChA0AGgAEEHgAIEHQAKEHQAKEDQAaAAQQeAAgQdAAoQdAAo4P8BtvBZDt7P5B4AAAAASUVORK5C\
+YII=\
+"
+
+
+    /* set a timeout to make sure all the above elements are created before
+       the object is initialized. */
+    setTimeout(function() {
+        anim7a4c1ec3b4ea44d4bfefbbf14f9e4034 = new Animation(frames, img_id, slider_id, 299.0,
+                                 loop_select_id);
+    }, 0);
+  })()
+</script>

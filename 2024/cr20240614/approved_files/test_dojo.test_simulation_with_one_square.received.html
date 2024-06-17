@@ -1,0 +1,340 @@
+
+<link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<script language="javascript">
+  function isInternetExplorer() {
+    ua = navigator.userAgent;
+    /* MSIE used to detect old browsers and Trident used to newer ones*/
+    return ua.indexOf("MSIE ") > -1 || ua.indexOf("Trident/") > -1;
+  }
+
+  /* Define the Animation class */
+  function Animation(frames, img_id, slider_id, interval, loop_select_id){
+    this.img_id = img_id;
+    this.slider_id = slider_id;
+    this.loop_select_id = loop_select_id;
+    this.interval = interval;
+    this.current_frame = 0;
+    this.direction = 0;
+    this.timer = null;
+    this.frames = new Array(frames.length);
+
+    for (var i=0; i<frames.length; i++)
+    {
+     this.frames[i] = new Image();
+     this.frames[i].src = frames[i];
+    }
+    var slider = document.getElementById(this.slider_id);
+    slider.max = this.frames.length - 1;
+    if (isInternetExplorer()) {
+        // switch from oninput to onchange because IE <= 11 does not conform
+        // with W3C specification. It ignores oninput and onchange behaves
+        // like oninput. In contrast, Microsoft Edge behaves correctly.
+        slider.setAttribute('onchange', slider.getAttribute('oninput'));
+        slider.setAttribute('oninput', null);
+    }
+    this.set_frame(this.current_frame);
+  }
+
+  Animation.prototype.get_loop_state = function(){
+    var button_group = document[this.loop_select_id].state;
+    for (var i = 0; i < button_group.length; i++) {
+        var button = button_group[i];
+        if (button.checked) {
+            return button.value;
+        }
+    }
+    return undefined;
+  }
+
+  Animation.prototype.set_frame = function(frame){
+    this.current_frame = frame;
+    document.getElementById(this.img_id).src =
+            this.frames[this.current_frame].src;
+    document.getElementById(this.slider_id).value = this.current_frame;
+  }
+
+  Animation.prototype.next_frame = function()
+  {
+    this.set_frame(Math.min(this.frames.length - 1, this.current_frame + 1));
+  }
+
+  Animation.prototype.previous_frame = function()
+  {
+    this.set_frame(Math.max(0, this.current_frame - 1));
+  }
+
+  Animation.prototype.first_frame = function()
+  {
+    this.set_frame(0);
+  }
+
+  Animation.prototype.last_frame = function()
+  {
+    this.set_frame(this.frames.length - 1);
+  }
+
+  Animation.prototype.slower = function()
+  {
+    this.interval /= 0.7;
+    if(this.direction > 0){this.play_animation();}
+    else if(this.direction < 0){this.reverse_animation();}
+  }
+
+  Animation.prototype.faster = function()
+  {
+    this.interval *= 0.7;
+    if(this.direction > 0){this.play_animation();}
+    else if(this.direction < 0){this.reverse_animation();}
+  }
+
+  Animation.prototype.anim_step_forward = function()
+  {
+    this.current_frame += 1;
+    if(this.current_frame < this.frames.length){
+      this.set_frame(this.current_frame);
+    }else{
+      var loop_state = this.get_loop_state();
+      if(loop_state == "loop"){
+        this.first_frame();
+      }else if(loop_state == "reflect"){
+        this.last_frame();
+        this.reverse_animation();
+      }else{
+        this.pause_animation();
+        this.last_frame();
+      }
+    }
+  }
+
+  Animation.prototype.anim_step_reverse = function()
+  {
+    this.current_frame -= 1;
+    if(this.current_frame >= 0){
+      this.set_frame(this.current_frame);
+    }else{
+      var loop_state = this.get_loop_state();
+      if(loop_state == "loop"){
+        this.last_frame();
+      }else if(loop_state == "reflect"){
+        this.first_frame();
+        this.play_animation();
+      }else{
+        this.pause_animation();
+        this.first_frame();
+      }
+    }
+  }
+
+  Animation.prototype.pause_animation = function()
+  {
+    this.direction = 0;
+    if (this.timer){
+      clearInterval(this.timer);
+      this.timer = null;
+    }
+  }
+
+  Animation.prototype.play_animation = function()
+  {
+    this.pause_animation();
+    this.direction = 1;
+    var t = this;
+    if (!this.timer) this.timer = setInterval(function() {
+        t.anim_step_forward();
+    }, this.interval);
+  }
+
+  Animation.prototype.reverse_animation = function()
+  {
+    this.pause_animation();
+    this.direction = -1;
+    var t = this;
+    if (!this.timer) this.timer = setInterval(function() {
+        t.anim_step_reverse();
+    }, this.interval);
+  }
+</script>
+
+<style>
+.animation {
+    display: inline-block;
+    text-align: center;
+}
+input[type=range].anim-slider {
+    width: 374px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.anim-buttons {
+    margin: 8px 0px;
+}
+.anim-buttons button {
+    padding: 0;
+    width: 36px;
+}
+.anim-state label {
+    margin-right: 8px;
+}
+.anim-state input {
+    margin: 0;
+    vertical-align: middle;
+}
+</style>
+
+<div class="animation">
+  <img id="_anim_img4ec5e3d9a735497ebc3add8a1cfdd4c7">
+  <div class="anim-controls">
+    <input id="_anim_slider4ec5e3d9a735497ebc3add8a1cfdd4c7" type="range" class="anim-slider"
+           name="points" min="0" max="1" step="1" value="0"
+           oninput="anim4ec5e3d9a735497ebc3add8a1cfdd4c7.set_frame(parseInt(this.value));">
+    <div class="anim-buttons">
+      <button title="Decrease speed" aria-label="Decrease speed" onclick="anim4ec5e3d9a735497ebc3add8a1cfdd4c7.slower()">
+          <i class="fa fa-minus"></i></button>
+      <button title="First frame" aria-label="First frame" onclick="anim4ec5e3d9a735497ebc3add8a1cfdd4c7.first_frame()">
+        <i class="fa fa-fast-backward"></i></button>
+      <button title="Previous frame" aria-label="Previous frame" onclick="anim4ec5e3d9a735497ebc3add8a1cfdd4c7.previous_frame()">
+          <i class="fa fa-step-backward"></i></button>
+      <button title="Play backwards" aria-label="Play backwards" onclick="anim4ec5e3d9a735497ebc3add8a1cfdd4c7.reverse_animation()">
+          <i class="fa fa-play fa-flip-horizontal"></i></button>
+      <button title="Pause" aria-label="Pause" onclick="anim4ec5e3d9a735497ebc3add8a1cfdd4c7.pause_animation()">
+          <i class="fa fa-pause"></i></button>
+      <button title="Play" aria-label="Play" onclick="anim4ec5e3d9a735497ebc3add8a1cfdd4c7.play_animation()">
+          <i class="fa fa-play"></i></button>
+      <button title="Next frame" aria-label="Next frame" onclick="anim4ec5e3d9a735497ebc3add8a1cfdd4c7.next_frame()">
+          <i class="fa fa-step-forward"></i></button>
+      <button title="Last frame" aria-label="Last frame" onclick="anim4ec5e3d9a735497ebc3add8a1cfdd4c7.last_frame()">
+          <i class="fa fa-fast-forward"></i></button>
+      <button title="Increase speed" aria-label="Increase speed" onclick="anim4ec5e3d9a735497ebc3add8a1cfdd4c7.faster()">
+          <i class="fa fa-plus"></i></button>
+    </div>
+    <form title="Repetition mode" aria-label="Repetition mode" action="#n" name="_anim_loop_select4ec5e3d9a735497ebc3add8a1cfdd4c7"
+          class="anim-state">
+      <input type="radio" name="state" value="once" id="_anim_radio1_4ec5e3d9a735497ebc3add8a1cfdd4c7"
+             >
+      <label for="_anim_radio1_4ec5e3d9a735497ebc3add8a1cfdd4c7">Once</label>
+      <input type="radio" name="state" value="loop" id="_anim_radio2_4ec5e3d9a735497ebc3add8a1cfdd4c7"
+             checked>
+      <label for="_anim_radio2_4ec5e3d9a735497ebc3add8a1cfdd4c7">Loop</label>
+      <input type="radio" name="state" value="reflect" id="_anim_radio3_4ec5e3d9a735497ebc3add8a1cfdd4c7"
+             >
+      <label for="_anim_radio3_4ec5e3d9a735497ebc3add8a1cfdd4c7">Reflect</label>
+    </form>
+  </div>
+</div>
+
+
+<script language="javascript">
+  /* Instantiate the Animation class. */
+  /* The IDs given should match those used in the template above. */
+  (function() {
+    var img_id = "_anim_img4ec5e3d9a735497ebc3add8a1cfdd4c7";
+    var slider_id = "_anim_slider4ec5e3d9a735497ebc3add8a1cfdd4c7";
+    var loop_select_id = "_anim_loop_select4ec5e3d9a735497ebc3add8a1cfdd4c7";
+    var frames = new Array(1);
+    
+  frames[0] = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAYAAADL1t+KAAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90\
+bGliIHZlcnNpb24zLjguMCwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy81sbWrAAAACXBIWXMAAA9h\
+AAAPYQGoP6dpAAAUJ0lEQVR4nO3dW5BUhZnA8a9nWgcEQQE3CVoyrK5RI4m6sFteNqCYNaKopMoE\
+k7Cwq65rNPFCAK0KwbyYOCYlpqIPljGkKhWDl3hlI17AxFguSiVqsuham5U7yE3uDMxMn30wjjUg\
+cpuhZ775/d76TPc53zyc/s85fc50qSiKIgCALq2m2gMAAAdO0AEgAUEHgAQEHQASEHQASEDQASAB\
+QQeABAQdABIQdABIQNABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASABQQeABAQd\
+ABIQdABIQNABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASABQQeABAQdABIQdABI\
+QNABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQEHTrAvHnzYsyYMXHsscdGXV1dfOITn4gzzjgjJk6c\
+2PqcESNGxIgRI6oy3wsvvBClUileeOGFfX7tggUL4tZbb42FCxfu8rMJEyZEfX39Ac8H7DtBh3Y2\
+a9asOPPMM2Pjxo3R0NAQzzzzTNx1111x1llnxcyZM1ufd88998Q999xTxUn3z4IFC+J73/veRwZ9\
+6tSp8eijjx78oYAoV3sAyKahoSEGDx4cs2fPjnL5w11s7Nix0dDQ0Pr45JNPrsZ4Heq4446r9gjQ\
+bTlCh3a2du3aGDBgQJuYf6Cm5sNdbudT7gsXLoxSqRR33HFH3H777VFfXx89e/aMESNGxNtvvx1N\
+TU1x8803x8CBA6Nv374xZsyYWLVqVZv1l0qluPXWW3fZbn19fUyYMOFj554/f36MHTu2dbv19fVx\
++eWXx6JFi1qfM2PGjLjssssiIuKcc86JUqkUpVIpZsyYEREffcq9sbExbrnllhg8eHAceuihcfTR\
+R8e1114b69ev32XGiy66KJ5++uk4/fTTo2fPnnHiiSfG/fff/7FzA+8TdGhnZ5xxRsybNy++9a1v\
+xbx586KpqWmfXn/33XfHSy+9FHfffXfcd9998dZbb8Xo0aPjiiuuiNWrV8f9998fDQ0N8dxzz8WV\
+V17ZbnMvXLgwPv3pT8f06dNj9uzZcfvtt8eKFSti2LBhsWbNmoiIuPDCC+O2225rnfPll1+Ol19+\
+OS688MKPXGdRFHHppZfGD3/4wxg3blzMmjUrbrrppvj5z38e5557bmzfvr3N819//fWYOHFi3Hjj\
+jfH444/HZz/72bjiiivid7/7Xbv9npBWAbSrNWvWFGeffXYREUVEFIccckhx5plnFt///veLTZs2\
+tT5v+PDhxfDhw1sfv/POO0VEFJ/73OeKlpaW1uXTp08vIqK4+OKL22znhhtuKCKi2LBhQ+uyiCim\
+TZu2y0yDBg0qxo8f3/p47ty5RUQUc+fO3e3v0dzcXGzevLno1atXcdddd7Uuf+ihh3b72vHjxxeD\
+Bg1qffz0008XEVE0NDS0ed7MmTOLiCjuvffeNjP26NGjWLRoUeuybdu2Ff369Suuvvrq3c4JvM8R\
+OrSz/v37x4svvhivvvpq/OAHP4hLLrkk3n777bjllltiyJAhrUe7uzNq1Kg2p+ZPOumkiIhdjoI/\
+WL548eJ2mXvz5s0xZcqUOP7446NcLke5XI7evXvHli1b4s0339yvdc6ZMyciYpfT/Zdddln06tUr\
+nn/++TbLTz311Dj22GNbH/fo0SNOOOGENqf9gY/mojjoIEOHDo2hQ4dGRERTU1NMmTIl7rzzzmho\
+aGhzcdzO+vXr1+bxoYce+rHLGxsb22Xer371q/H888/H1KlTY9iwYdGnT58olUoxatSo2LZt236t\
+c+3atVEul+Ooo45qs7xUKsUnP/nJWLt2bZvl/fv332UddXV1+7196E4cocNBcMghh8S0adMiIuLP\
+f/5zh22nrq5ul8+lI2KXcO5sw4YN8dRTT8XkyZPj5ptvjpEjR8awYcNiyJAhsW7duv2ep3///tHc\
+3ByrV69us7woili5cmUMGDBgv9cNtCXo0M5WrFjxkcs/OG09cODADtt2fX19vPHGG22WzZkzJzZv\
+3vyxryuVSlEURdTV1bVZft9990VLS0ubZR88Z2+OmkeOHBkREb/4xS/aLH/kkUdiy5YtrT8HDpxT\
+7tDOzj///DjmmGNi9OjRceKJJ0alUonXXnstfvSjH0Xv3r3j+uuv77Btjxs3LqZOnRrf/e53Y/jw\
+4bFgwYL4yU9+En379v3Y1/Xp0yc+//nPxx133BEDBgyI+vr6+O1vfxs//elP44gjjmjz3FNOOSUi\
+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\
+BAQdABIQdABIQNABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASABQQeABAQdABIQ\
+dABIQNABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASABQQeABAQdABIQdABIQNAB\
+IAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASABQQeABAQdABIQdABIQNABIAFBB4AE\
+BB0AEhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASABQQeABAQdABIQdABIQNABIAFBB4AEBB0AEhB0\
+AEhA0AEgAUEHgAQEHQASEHQASEDQASABQQeABAQdABIQdABIQNABIAFBB4AEBB0AEhB0AEhA0AEg\
+AUEHgAQEHQASEHQASEDQASABQQeABAQdABIQdABIQNABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQE\
+HQASEHQASEDQASABQQeABAQdABIQdABIQNABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQEHQASEHQA\
+SEDQASABQQeABAQdABIQdABIQNABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASAB\
+QQeABAQdABIQdABIQNABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASABQQeABAQd\
+ABIQdABIQNABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASABQQeABAQdABIQdABI\
+QNABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASABQQeABAQdABIQdABIQNABIAFB\
+B4AEBB0AEhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASABQQeABAQdABIQdABIQNABIAFBB4AEBB0A\
+EhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASABQQeABAQdABIQdABI4P8BmDQELTzQZCUAAAAASUVO\
+RK5CYII=\
+"
+
+
+    /* set a timeout to make sure all the above elements are created before
+       the object is initialized. */
+    setTimeout(function() {
+        anim4ec5e3d9a735497ebc3add8a1cfdd4c7 = new Animation(frames, img_id, slider_id, 299.0,
+                                 loop_select_id);
+    }, 0);
+  })()
+</script>

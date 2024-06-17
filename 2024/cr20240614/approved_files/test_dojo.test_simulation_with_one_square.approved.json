@@ -1,0 +1,27 @@
+{
+    "config": {
+        "figsize": 5,
+        "gridsize": 5,
+        "title": "Simulation"
+    },
+    "states": [
+        {
+            "ant": {
+                "coordinate": {
+                    "x": 0,
+                    "y": 0
+                },
+                "orientation": 0
+            },
+            "squares": [
+                {
+                    "color": 1,
+                    "coordinate": {
+                        "x": 0,
+                        "y": 0
+                    }
+                }
+            ]
+        }
+    ]
+}
