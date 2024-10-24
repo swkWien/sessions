@@ -1,0 +1,20 @@
+Ensemble TDD and kata intro
+(group by common programming language)
+
+UNSORTED
+
+   Ziel
+   - Ensemble Modus kennen lernen
+   - TDD kennen lernen
+   - Problem/Kata kennen lernen
+
+   Facilitation
+   - Ensemble strikt geführt mit Rotation
+   - Inkremente nach Wunsch der Teilnehmer
+     (vermutlich zu groß, führt zu Lerneffekt bei 2. Session)
+
+   Handout für Ensemble Facilitators
+   - Ensemble Rules, Rotation auf Zeit
+   - Ensemble Facilitation Tipps
+   - 3 Laws of TDD
+   - Link Wikipedia Tetris

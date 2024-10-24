@@ -1,0 +1,16 @@
+TDD as if You Meant It
+----------------------
+
+* Write exactly one, *simplest*, failing test 
+
+* Add *least code possible* to pass test 
+  Add code only inside test method
+
+* Copy the test body to the next test method
+
+* When *duplication* is spotted
+  Extract non-test code (extract method)
+
+* New classes only as target for "move method"
+
+* Refactor as required

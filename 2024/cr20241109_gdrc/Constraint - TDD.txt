@@ -1,0 +1,18 @@
+Test Driven Development
+-----------------------
+
+Write a failing test
+Make the test pass
+Refactor
+
+
+Uncle Bob’s 3 Laws of TDD
+-------------------------
+
+You are not allowed to write any ...
+
+... production code unless to make a failing test pass.
+... more of a unit test than is sufficient to fail the test.
+... more production code than is sufficient to pass the test.
+
+see http://butunclebob.com/ArticleS.UncleBob.TheThreeRulesOfTdd
