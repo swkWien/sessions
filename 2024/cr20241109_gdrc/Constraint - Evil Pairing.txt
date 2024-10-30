@@ -1,0 +1,5 @@
+Evil Pairing
+------------
+
+* Ping-pong (one person writes the tests, the other person writes the implementation code, then switch)
+* Find the Loophole (the implementation person purposely writes the wrong algorithm that still makes the tests turn green. But they have to keep the code very clean all the while.)
