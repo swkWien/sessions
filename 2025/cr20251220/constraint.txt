@@ -1,0 +1,1 @@
+No Mouse, No If (Cyclomatic Complexity One), Ensemble, TDD ping pong
